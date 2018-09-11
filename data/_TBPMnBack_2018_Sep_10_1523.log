@@ -1,0 +1,864 @@
+9.4026 	WARNING 	User requested fullscreen with size [1440  900], but screen is actually [1280, 800]. Using actual size
+10.1911 	EXP 	Created window1 = Window(allowGUI=False, allowStencil=False, args=UNKNOWN, autoLog=True, bitsMode=UNKNOWN, blendMode='avg', color=array([0., 0., 0.]), colorSpace='rgb', fullscr=<method-wrapper '__getattribute__' of attributeSetter object at 0x124784da0>, gamma=None, kwargs=UNKNOWN, lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x127b2f358>, multiSample=False, name='window1', numSamples=2, pos=[0.0, 0.0], screen=0, size=array([1280,  800]), stereo=False, units='norm', useFBO=True, useRetina=False, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+10.1911 	EXP 	window1: recordFrameIntervals = False
+10.3561 	EXP 	window1: recordFrameIntervals = True
+10.5396 	EXP 	window1: recordFrameIntervals = False
+10.6622 	EXP 	Created text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='text', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255., 255.]), text='default text', units='norm', win=Window(...), wrapWidth=1)
+10.7432 	EXP 	Created textPractice = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='textPractice', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255., 255.]), text=str(...), units='norm', win=Window(...), wrapWidth=1)
+10.8080 	EXP 	Created textExperiment = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='textExperiment', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255., 255.]), text=str(...), units='norm', win=Window(...), wrapWidth=1)
+10.8193 	EXP 	Created textTask = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='textTask', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255., 255.]), text='Bloque nuevo', units='norm', win=Window(...), wrapWidth=1)
+10.8277 	EXP 	Created image_2 = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='image_2', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([0.5, 0.5]), texRes=128, units='norm', win=Window(...))
+10.8363 	EXP 	Created noise = NoiseStim(__class__=<class 'psychopy.visual.noise.NoiseStim'>, autoDraw=False, autoLog=True, blendmode='avg', color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, interpolate=False, mask='none', maskParams=None, name='noise', opacity=1.0, ori=0.0, phase=array([0., 0.]), pos=array([0., 0.]), rgbPedestal=array([0., 0., 0.]), sf=array([1., 1.]), size=array([0.5, 0.5]), tex='sin', texRes=128, units='norm', win=Window(...))
+10.8494 	EXP 	Created textThanks = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='textThanks', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255., 255.]), text='Obrigado', units='norm', win=Window(...), wrapWidth=1)
+10.8717 	EXP 	noise: blendmode = 'avg'
+10.8717 	EXP 	noise: mask = None
+10.8717 	EXP 	noise: texRes = 128
+10.8717 	EXP 	noise: noiseType = 'Binary'
+10.8717 	EXP 	noise: noiseImage = None
+10.8717 	EXP 	noise: noiseElementSize = 0.0625
+10.8717 	EXP 	noise: noiseBaseSf = 8.0
+10.8717 	EXP 	noise: noiseBW = 1.0
+10.8717 	EXP 	noise: noiseBWO = 1.0
+10.8717 	EXP 	noise: noiseFractalPower = 0.0
+10.8717 	EXP 	noise: noiseFilterUpper = 8.0
+10.8717 	EXP 	noise: noiseFilterLower = 1.0
+10.8717 	EXP 	noise: noiseFilterOrder = 0.0
+10.8717 	EXP 	noise: noiseClip = 3.0
+10.8717 	EXP 	noise: tex = array([[-1., -1.,  1., -1.,  1.,  1., -1.,  1.],
+       [ 1., -1.,  1.,  1., -1.,  1.,  1., -1.],
+       [ 1., -1., -1.,  1.,  1.,  1.,  1., -1.],
+       [-1.,  1., -1., -1.,  1., -1., -1., -1.],
+       [ 1., -1., -1., -1., -1.,  1.,  1., -1.],
+       [-1.,  1., -1., -1.,  1., -1.,  1.,  1.],
+       [-1.,  1., -1., -1., -1.,  1.,  1.,  1.],
+       [-1.,  1.,  1., -1., -1.,  1.,  1.,  1.]])
+10.8717 	EXP 	noise: tex = array([[-1., -1.,  1., -1., -1., -1., -1.,  1.],
+       [-1.,  1.,  1.,  1., -1.,  1.,  1.,  1.],
+       [-1., -1.,  1., -1., -1.,  1.,  1.,  1.],
+       [ 1.,  1.,  1., -1.,  1., -1., -1., -1.],
+       [ 1.,  1.,  1.,  1.,  1.,  1., -1., -1.],
+       [-1.,  1., -1.,  1., -1., -1., -1., -1.],
+       [ 1.,  1.,  1., -1., -1., -1., -1., -1.],
+       [ 1.,  1., -1.,  1.,  1., -1.,  1., -1.]])
+10.8717 	EXP 	text: text = 'Bem vindo. \nLeia as instrucoes no papel.'
+10.8717 	EXP 	text: autoDraw = True
+11.4574 	DATA 	Keypress: t
+11.4868 	EXP 	text: autoDraw = False
+11.4868 	EXP 	textPractice: autoDraw = True
+12.9526 	DATA 	Keypress: t
+12.9664 	EXP 	textPractice: autoDraw = False
+12.9664 	EXP 	textExperiment: autoDraw = True
+15.9960 	DATA 	Keypress: t
+16.0035 	EXP 	Imported chooseBlock.csv as conditions, 4 conditions, 2 params
+16.0040 	EXP 	Created sequence: random, trialTypes=4, nReps=1, seed=None
+16.0043 	EXP 	New trial (rep=0, index=0): OrderedDict([('condsFile', 'practiceBlock.csv'), ('readyMsg', 'Pronto')])
+16.0264 	EXP 	textExperiment: autoDraw = False
+16.0264 	EXP 	textTask: autoDraw = True
+17.8082 	DATA 	Keypress: t
+17.8134 	EXP 	Imported practiceBlock.csv as conditions, 22 conditions, 2 params
+17.8139 	EXP 	Created sequence: random, trialTypes=22, nReps=1, seed=None
+17.8142 	EXP 	New trial (rep=0, index=0): OrderedDict([('stimFile', 'stims/001.i.jpg'), ('Valence', 'Practice')])
+17.9057 	EXP 	textTask: autoDraw = False
+17.9057 	EXP 	image_2: image = 'stims/001.i.jpg'
+17.9057 	EXP 	image_2: autoDraw = True
+18.5204 	EXP 	image_2: autoDraw = False
+18.5371 	EXP 	noise: autoDraw = True
+19.5190 	EXP 	New trial (rep=0, index=1): OrderedDict([('stimFile', 'stims/014.i.jpg'), ('Valence', 'Practice')])
+19.5348 	EXP 	image_2: autoDraw = False
+19.5348 	EXP 	noise: autoDraw = False
+19.5348 	EXP 	image_2: image = 'stims/014.i.jpg'
+19.5348 	EXP 	image_2: autoDraw = True
+20.2333 	EXP 	image_2: autoDraw = False
+20.2496 	EXP 	noise: autoDraw = True
+21.2150 	EXP 	New trial (rep=0, index=2): OrderedDict([('stimFile', 'stims/011.i.jpg'), ('Valence', 'Practice')])
+21.2308 	EXP 	image_2: autoDraw = False
+21.2308 	EXP 	noise: autoDraw = False
+21.2308 	EXP 	image_2: image = 'stims/011.i.jpg'
+21.2308 	EXP 	image_2: autoDraw = True
+21.9292 	EXP 	image_2: autoDraw = False
+21.9462 	EXP 	noise: autoDraw = True
+22.9104 	EXP 	New trial (rep=0, index=3): OrderedDict([('stimFile', 'stims/010.i.jpg'), ('Valence', 'Practice')])
+22.9268 	EXP 	image_2: autoDraw = False
+22.9268 	EXP 	noise: autoDraw = False
+22.9268 	EXP 	image_2: image = 'stims/010.i.jpg'
+22.9268 	EXP 	image_2: autoDraw = True
+23.6252 	EXP 	image_2: autoDraw = False
+23.6409 	EXP 	noise: autoDraw = True
+24.6076 	EXP 	New trial (rep=0, index=4): OrderedDict([('stimFile', 'stims/018.i.jpg'), ('Valence', 'Practice')])
+24.6227 	EXP 	noise: autoDraw = False
+24.6227 	EXP 	image_2: autoDraw = False
+24.6227 	EXP 	noise: autoDraw = False
+24.6227 	EXP 	image_2: image = 'stims/018.i.jpg'
+24.6227 	EXP 	image_2: autoDraw = True
+25.3212 	EXP 	image_2: autoDraw = False
+25.3375 	EXP 	noise: autoDraw = True
+26.3033 	EXP 	New trial (rep=0, index=5): OrderedDict([('stimFile', 'stims/004.i.jpg'), ('Valence', 'Practice')])
+26.3190 	EXP 	noise: autoDraw = False
+26.3190 	EXP 	image_2: autoDraw = False
+26.3190 	EXP 	noise: autoDraw = False
+26.3190 	EXP 	image_2: image = 'stims/004.i.jpg'
+26.3190 	EXP 	image_2: autoDraw = True
+27.0175 	EXP 	image_2: autoDraw = False
+27.0340 	EXP 	noise: autoDraw = True
+28.0000 	EXP 	New trial (rep=0, index=6): OrderedDict([('stimFile', 'stims/013.i.jpg'), ('Valence', 'Practice')])
+28.0150 	EXP 	noise: autoDraw = False
+28.0150 	EXP 	image_2: autoDraw = False
+28.0150 	EXP 	noise: autoDraw = False
+28.0150 	EXP 	image_2: image = 'stims/013.i.jpg'
+28.0150 	EXP 	image_2: autoDraw = True
+28.7129 	EXP 	image_2: autoDraw = False
+28.7291 	EXP 	noise: autoDraw = True
+29.6954 	EXP 	New trial (rep=0, index=7): OrderedDict([('stimFile', 'stims/016.i.jpg'), ('Valence', 'Practice')])
+29.7109 	EXP 	noise: autoDraw = False
+29.7109 	EXP 	image_2: autoDraw = False
+29.7109 	EXP 	noise: autoDraw = False
+29.7109 	EXP 	image_2: image = 'stims/016.i.jpg'
+29.7109 	EXP 	image_2: autoDraw = True
+30.4092 	EXP 	image_2: autoDraw = False
+30.4262 	EXP 	noise: autoDraw = True
+31.3912 	EXP 	New trial (rep=0, index=8): OrderedDict([('stimFile', 'stims/012.i.jpg'), ('Valence', 'Practice')])
+31.4065 	EXP 	noise: autoDraw = False
+31.4065 	EXP 	image_2: autoDraw = False
+31.4065 	EXP 	noise: autoDraw = False
+31.4065 	EXP 	image_2: image = 'stims/012.i.jpg'
+31.4065 	EXP 	image_2: autoDraw = True
+32.1050 	EXP 	image_2: autoDraw = False
+32.1212 	EXP 	noise: autoDraw = True
+33.0875 	EXP 	New trial (rep=0, index=9): OrderedDict([('stimFile', 'stims/007.i.jpg'), ('Valence', 'Practice')])
+33.1020 	EXP 	noise: autoDraw = False
+33.1020 	EXP 	image_2: autoDraw = False
+33.1020 	EXP 	noise: autoDraw = False
+33.1020 	EXP 	image_2: image = 'stims/007.i.jpg'
+33.1020 	EXP 	image_2: autoDraw = True
+33.8016 	EXP 	image_2: autoDraw = False
+33.8178 	EXP 	noise: autoDraw = True
+34.7826 	EXP 	New trial (rep=0, index=10): OrderedDict([('stimFile', 'stims/017.i.jpg'), ('Valence', 'Practice')])
+34.7991 	EXP 	noise: autoDraw = False
+34.7991 	EXP 	image_2: autoDraw = False
+34.7991 	EXP 	noise: autoDraw = False
+34.7991 	EXP 	image_2: image = 'stims/017.i.jpg'
+34.7991 	EXP 	image_2: autoDraw = True
+35.4978 	EXP 	image_2: autoDraw = False
+35.5137 	EXP 	noise: autoDraw = True
+36.4791 	EXP 	New trial (rep=0, index=11): OrderedDict([('stimFile', 'stims/006.i.jpg'), ('Valence', 'Practice')])
+36.4949 	EXP 	noise: autoDraw = False
+36.4949 	EXP 	image_2: autoDraw = False
+36.4949 	EXP 	noise: autoDraw = False
+36.4949 	EXP 	image_2: image = 'stims/006.i.jpg'
+36.4949 	EXP 	image_2: autoDraw = True
+37.1936 	EXP 	image_2: autoDraw = False
+37.2100 	EXP 	noise: autoDraw = True
+38.1757 	EXP 	New trial (rep=0, index=12): OrderedDict([('stimFile', 'stims/002.i.jpg'), ('Valence', 'Practice')])
+38.1903 	EXP 	noise: autoDraw = False
+38.1903 	EXP 	image_2: autoDraw = False
+38.1903 	EXP 	noise: autoDraw = False
+38.1903 	EXP 	image_2: image = 'stims/002.i.jpg'
+38.1903 	EXP 	image_2: autoDraw = True
+38.8894 	EXP 	image_2: autoDraw = False
+38.9056 	EXP 	noise: autoDraw = True
+39.8710 	EXP 	New trial (rep=0, index=13): OrderedDict([('stimFile', 'stims/008.i.jpg'), ('Valence', 'Practice')])
+39.8864 	EXP 	noise: autoDraw = False
+39.8864 	EXP 	image_2: autoDraw = False
+39.8864 	EXP 	noise: autoDraw = False
+39.8864 	EXP 	image_2: image = 'stims/008.i.jpg'
+39.8864 	EXP 	image_2: autoDraw = True
+40.5850 	EXP 	image_2: autoDraw = False
+40.6019 	EXP 	noise: autoDraw = True
+41.5670 	EXP 	New trial (rep=0, index=14): OrderedDict([('stimFile', 'stims/003.i.jpg'), ('Valence', 'Practice')])
+41.5828 	EXP 	noise: autoDraw = False
+41.5828 	EXP 	image_2: autoDraw = False
+41.5828 	EXP 	noise: autoDraw = False
+41.5828 	EXP 	image_2: image = 'stims/003.i.jpg'
+41.5828 	EXP 	image_2: autoDraw = True
+42.2810 	EXP 	image_2: autoDraw = False
+42.2984 	EXP 	noise: autoDraw = True
+43.2633 	EXP 	New trial (rep=0, index=15): OrderedDict([('stimFile', 'stims/020.i.jpg'), ('Valence', 'Practice')])
+43.2786 	EXP 	noise: autoDraw = False
+43.2786 	EXP 	image_2: autoDraw = False
+43.2786 	EXP 	noise: autoDraw = False
+43.2786 	EXP 	image_2: image = 'stims/020.i.jpg'
+43.2786 	EXP 	image_2: autoDraw = True
+43.9774 	EXP 	image_2: autoDraw = False
+43.9944 	EXP 	noise: autoDraw = True
+44.9594 	EXP 	New trial (rep=0, index=16): OrderedDict([('stimFile', 'stims/021.i.jpg'), ('Valence', 'Practice')])
+44.9744 	EXP 	noise: autoDraw = False
+44.9744 	EXP 	image_2: autoDraw = False
+44.9744 	EXP 	noise: autoDraw = False
+44.9744 	EXP 	image_2: image = 'stims/021.i.jpg'
+44.9744 	EXP 	image_2: autoDraw = True
+45.6735 	EXP 	image_2: autoDraw = False
+45.6900 	EXP 	noise: autoDraw = True
+46.6552 	EXP 	New trial (rep=0, index=17): OrderedDict([('stimFile', 'stims/015.i.jpg'), ('Valence', 'Practice')])
+46.6707 	EXP 	noise: autoDraw = False
+46.6707 	EXP 	image_2: autoDraw = False
+46.6707 	EXP 	noise: autoDraw = False
+46.6707 	EXP 	image_2: image = 'stims/015.i.jpg'
+46.6707 	EXP 	image_2: autoDraw = True
+47.3690 	EXP 	image_2: autoDraw = False
+47.3860 	EXP 	noise: autoDraw = True
+48.3514 	EXP 	New trial (rep=0, index=18): OrderedDict([('stimFile', 'stims/005.i.jpg'), ('Valence', 'Practice')])
+48.3667 	EXP 	noise: autoDraw = False
+48.3667 	EXP 	image_2: autoDraw = False
+48.3667 	EXP 	noise: autoDraw = False
+48.3667 	EXP 	image_2: image = 'stims/005.i.jpg'
+48.3667 	EXP 	image_2: autoDraw = True
+49.0653 	EXP 	image_2: autoDraw = False
+49.0816 	EXP 	noise: autoDraw = True
+50.0474 	EXP 	New trial (rep=0, index=19): OrderedDict([('stimFile', 'stims/009.i.jpg'), ('Valence', 'Practice')])
+50.0628 	EXP 	noise: autoDraw = False
+50.0628 	EXP 	image_2: autoDraw = False
+50.0628 	EXP 	noise: autoDraw = False
+50.0628 	EXP 	image_2: image = 'stims/009.i.jpg'
+50.0628 	EXP 	image_2: autoDraw = True
+50.7603 	EXP 	image_2: autoDraw = False
+50.7776 	EXP 	noise: autoDraw = True
+51.7432 	EXP 	New trial (rep=0, index=20): OrderedDict([('stimFile', 'stims/022.i.jpg'), ('Valence', 'Practice')])
+51.7590 	EXP 	noise: autoDraw = False
+51.7590 	EXP 	image_2: autoDraw = False
+51.7590 	EXP 	noise: autoDraw = False
+51.7590 	EXP 	image_2: image = 'stims/022.i.jpg'
+51.7590 	EXP 	image_2: autoDraw = True
+52.4579 	EXP 	image_2: autoDraw = False
+52.4745 	EXP 	noise: autoDraw = True
+53.4399 	EXP 	New trial (rep=0, index=21): OrderedDict([('stimFile', 'stims/019.i.jpg'), ('Valence', 'Practice')])
+53.4556 	EXP 	noise: autoDraw = False
+53.4556 	EXP 	image_2: autoDraw = False
+53.4556 	EXP 	noise: autoDraw = False
+53.4556 	EXP 	image_2: image = 'stims/019.i.jpg'
+53.4556 	EXP 	image_2: autoDraw = True
+54.1539 	EXP 	image_2: autoDraw = False
+54.1705 	EXP 	noise: autoDraw = True
+55.1356 	EXP 	New trial (rep=0, index=1): OrderedDict([('condsFile', 'positiveBlock.csv'), ('readyMsg', 'Pronto')])
+55.1516 	EXP 	noise: autoDraw = False
+55.1516 	EXP 	image_2: autoDraw = False
+55.1516 	EXP 	noise: autoDraw = False
+55.1516 	EXP 	textTask: autoDraw = True
+60.0092 	DATA 	Keypress: t
+60.0148 	EXP 	Imported positiveBlock.csv as conditions, 33 conditions, 2 params
+60.0154 	EXP 	Created sequence: random, trialTypes=33, nReps=1, seed=None
+60.0158 	EXP 	New trial (rep=0, index=0): OrderedDict([('stimFile', 'stims/4531.jpg'), ('Valence', 'Positive')])
+60.0730 	EXP 	textTask: autoDraw = False
+60.0730 	EXP 	image_2: image = 'stims/4531.jpg'
+60.0730 	EXP 	image_2: autoDraw = True
+60.7219 	EXP 	image_2: autoDraw = False
+60.7384 	EXP 	noise: autoDraw = True
+61.7199 	EXP 	New trial (rep=0, index=1): OrderedDict([('stimFile', 'stims/1720.jpg'), ('Valence', 'Positive')])
+61.7865 	EXP 	image_2: autoDraw = False
+61.7865 	EXP 	noise: autoDraw = False
+61.7865 	EXP 	image_2: image = 'stims/1720.jpg'
+61.7865 	EXP 	image_2: autoDraw = True
+62.4346 	EXP 	image_2: autoDraw = False
+62.4510 	EXP 	noise: autoDraw = True
+63.4160 	EXP 	New trial (rep=0, index=2): OrderedDict([('stimFile', 'stims/4608.jpg'), ('Valence', 'Positive')])
+63.4650 	EXP 	image_2: autoDraw = False
+63.4650 	EXP 	noise: autoDraw = False
+63.4650 	EXP 	image_2: image = 'stims/4608.jpg'
+63.4650 	EXP 	image_2: autoDraw = True
+64.1306 	EXP 	image_2: autoDraw = False
+64.1464 	EXP 	noise: autoDraw = True
+65.1121 	EXP 	New trial (rep=0, index=3): OrderedDict([('stimFile', 'stims/8041.jpg'), ('Valence', 'Positive')])
+65.1780 	EXP 	image_2: autoDraw = False
+65.1780 	EXP 	noise: autoDraw = False
+65.1780 	EXP 	image_2: image = 'stims/8041.jpg'
+65.1780 	EXP 	image_2: autoDraw = True
+65.8265 	EXP 	image_2: autoDraw = False
+65.8432 	EXP 	noise: autoDraw = True
+66.8085 	EXP 	New trial (rep=0, index=4): OrderedDict([('stimFile', 'stims/7330.jpg'), ('Valence', 'Positive')])
+66.8735 	EXP 	noise: autoDraw = False
+66.8735 	EXP 	image_2: autoDraw = False
+66.8735 	EXP 	noise: autoDraw = False
+66.8735 	EXP 	image_2: image = 'stims/7330.jpg'
+66.8735 	EXP 	image_2: autoDraw = True
+67.5224 	EXP 	image_2: autoDraw = False
+67.5391 	EXP 	noise: autoDraw = True
+68.5047 	EXP 	New trial (rep=0, index=5): OrderedDict([('stimFile', 'stims/7350.jpg'), ('Valence', 'Positive')])
+68.5700 	EXP 	noise: autoDraw = False
+68.5700 	EXP 	image_2: autoDraw = False
+68.5700 	EXP 	noise: autoDraw = False
+68.5700 	EXP 	image_2: image = 'stims/7350.jpg'
+68.5700 	EXP 	image_2: autoDraw = True
+69.2184 	EXP 	image_2: autoDraw = False
+69.2352 	EXP 	noise: autoDraw = True
+70.1997 	EXP 	New trial (rep=0, index=6): OrderedDict([('stimFile', 'stims/5628.jpg'), ('Valence', 'Positive')])
+70.2659 	EXP 	noise: autoDraw = False
+70.2659 	EXP 	image_2: autoDraw = False
+70.2659 	EXP 	noise: autoDraw = False
+70.2659 	EXP 	image_2: image = 'stims/5628.jpg'
+70.2659 	EXP 	image_2: autoDraw = True
+70.9146 	EXP 	image_2: autoDraw = False
+70.9311 	EXP 	noise: autoDraw = True
+71.8959 	EXP 	New trial (rep=0, index=7): OrderedDict([('stimFile', 'stims/7402.jpg'), ('Valence', 'Positive')])
+71.9454 	EXP 	noise: autoDraw = False
+71.9454 	EXP 	image_2: autoDraw = False
+71.9454 	EXP 	noise: autoDraw = False
+71.9454 	EXP 	image_2: image = 'stims/7402.jpg'
+71.9454 	EXP 	image_2: autoDraw = True
+72.6106 	EXP 	image_2: autoDraw = False
+72.6271 	EXP 	noise: autoDraw = True
+73.5929 	EXP 	New trial (rep=0, index=8): OrderedDict([('stimFile', 'stims/4534.jpg'), ('Valence', 'Positive')])
+73.6407 	EXP 	noise: autoDraw = False
+73.6407 	EXP 	image_2: autoDraw = False
+73.6407 	EXP 	noise: autoDraw = False
+73.6407 	EXP 	image_2: image = 'stims/4534.jpg'
+73.6407 	EXP 	image_2: autoDraw = True
+74.3066 	EXP 	image_2: autoDraw = False
+74.3227 	EXP 	noise: autoDraw = True
+75.2887 	EXP 	New trial (rep=0, index=9): OrderedDict([('stimFile', 'stims/7475.jpg'), ('Valence', 'Positive')])
+75.3374 	EXP 	noise: autoDraw = False
+75.3374 	EXP 	image_2: autoDraw = False
+75.3374 	EXP 	noise: autoDraw = False
+75.3374 	EXP 	image_2: image = 'stims/7475.jpg'
+75.3374 	EXP 	image_2: autoDraw = True
+76.0025 	EXP 	image_2: autoDraw = False
+76.0192 	EXP 	noise: autoDraw = True
+76.9850 	EXP 	New trial (rep=0, index=10): OrderedDict([('stimFile', 'stims/7351.jpg'), ('Valence', 'Positive')])
+77.0494 	EXP 	noise: autoDraw = False
+77.0494 	EXP 	image_2: autoDraw = False
+77.0494 	EXP 	noise: autoDraw = False
+77.0494 	EXP 	image_2: image = 'stims/7351.jpg'
+77.0494 	EXP 	image_2: autoDraw = True
+77.6986 	EXP 	image_2: autoDraw = False
+77.7151 	EXP 	noise: autoDraw = True
+78.6807 	EXP 	New trial (rep=0, index=11): OrderedDict([('stimFile', 'stims/8502.jpg'), ('Valence', 'Positive')])
+78.7460 	EXP 	noise: autoDraw = False
+78.7460 	EXP 	image_2: autoDraw = False
+78.7460 	EXP 	noise: autoDraw = False
+78.7460 	EXP 	image_2: image = 'stims/8502.jpg'
+78.7460 	EXP 	image_2: autoDraw = True
+79.3942 	EXP 	image_2: autoDraw = False
+79.4114 	EXP 	noise: autoDraw = True
+80.3767 	EXP 	New trial (rep=0, index=12): OrderedDict([('stimFile', 'stims/2240.jpg'), ('Valence', 'Positive')])
+80.4420 	EXP 	noise: autoDraw = False
+80.4420 	EXP 	image_2: autoDraw = False
+80.4420 	EXP 	noise: autoDraw = False
+80.4420 	EXP 	image_2: image = 'stims/2240.jpg'
+80.4420 	EXP 	image_2: autoDraw = True
+81.0905 	EXP 	image_2: autoDraw = False
+81.1072 	EXP 	noise: autoDraw = True
+82.0726 	EXP 	New trial (rep=0, index=13): OrderedDict([('stimFile', 'stims/7340.jpg'), ('Valence', 'Positive')])
+82.1377 	EXP 	noise: autoDraw = False
+82.1377 	EXP 	image_2: autoDraw = False
+82.1377 	EXP 	noise: autoDraw = False
+82.1377 	EXP 	image_2: image = 'stims/7340.jpg'
+82.1377 	EXP 	image_2: autoDraw = True
+82.7867 	EXP 	image_2: autoDraw = False
+82.8032 	EXP 	noise: autoDraw = True
+83.7687 	EXP 	New trial (rep=0, index=14): OrderedDict([('stimFile', 'stims/7430.jpg'), ('Valence', 'Positive')])
+83.8340 	EXP 	noise: autoDraw = False
+83.8340 	EXP 	image_2: autoDraw = False
+83.8340 	EXP 	noise: autoDraw = False
+83.8340 	EXP 	image_2: image = 'stims/7430.jpg'
+83.8340 	EXP 	image_2: autoDraw = True
+84.4819 	EXP 	image_2: autoDraw = False
+84.4992 	EXP 	noise: autoDraw = True
+85.4646 	EXP 	New trial (rep=0, index=15): OrderedDict([('stimFile', 'stims/4611.jpg'), ('Valence', 'Positive')])
+85.5301 	EXP 	noise: autoDraw = False
+85.5301 	EXP 	image_2: autoDraw = False
+85.5301 	EXP 	noise: autoDraw = False
+85.5301 	EXP 	image_2: image = 'stims/4611.jpg'
+85.5301 	EXP 	image_2: autoDraw = True
+86.1781 	EXP 	image_2: autoDraw = False
+86.1951 	EXP 	noise: autoDraw = True
+87.1607 	EXP 	New trial (rep=0, index=16): OrderedDict([('stimFile', 'stims/8090.jpg'), ('Valence', 'Positive')])
+87.2256 	EXP 	noise: autoDraw = False
+87.2256 	EXP 	image_2: autoDraw = False
+87.2256 	EXP 	noise: autoDraw = False
+87.2256 	EXP 	image_2: image = 'stims/8090.jpg'
+87.2256 	EXP 	image_2: autoDraw = True
+87.8746 	EXP 	image_2: autoDraw = False
+87.8914 	EXP 	noise: autoDraw = True
+88.8567 	EXP 	New trial (rep=0, index=17): OrderedDict([('stimFile', 'stims/7481.jpg'), ('Valence', 'Positive')])
+88.9047 	EXP 	noise: autoDraw = False
+88.9047 	EXP 	image_2: autoDraw = False
+88.9047 	EXP 	noise: autoDraw = False
+88.9047 	EXP 	image_2: image = 'stims/7481.jpg'
+88.9047 	EXP 	image_2: autoDraw = True
+89.5707 	EXP 	image_2: autoDraw = False
+89.5873 	EXP 	noise: autoDraw = True
+90.5527 	EXP 	New trial (rep=0, index=18): OrderedDict([('stimFile', 'stims/5270.jpg'), ('Valence', 'Positive')])
+90.6180 	EXP 	noise: autoDraw = False
+90.6180 	EXP 	image_2: autoDraw = False
+90.6180 	EXP 	noise: autoDraw = False
+90.6180 	EXP 	image_2: image = 'stims/5270.jpg'
+90.6180 	EXP 	image_2: autoDraw = True
+91.2665 	EXP 	image_2: autoDraw = False
+91.2834 	EXP 	noise: autoDraw = True
+92.2487 	EXP 	New trial (rep=0, index=19): OrderedDict([('stimFile', 'stims/7460.jpg'), ('Valence', 'Positive')])
+92.2971 	EXP 	noise: autoDraw = False
+92.2971 	EXP 	image_2: autoDraw = False
+92.2971 	EXP 	noise: autoDraw = False
+92.2971 	EXP 	image_2: image = 'stims/7460.jpg'
+92.2971 	EXP 	image_2: autoDraw = True
+92.9625 	EXP 	image_2: autoDraw = False
+92.9794 	EXP 	noise: autoDraw = True
+93.9447 	EXP 	New trial (rep=0, index=20): OrderedDict([('stimFile', 'stims/5622.jpg'), ('Valence', 'Positive')])
+94.0099 	EXP 	noise: autoDraw = False
+94.0099 	EXP 	image_2: autoDraw = False
+94.0099 	EXP 	noise: autoDraw = False
+94.0099 	EXP 	image_2: image = 'stims/5622.jpg'
+94.0099 	EXP 	image_2: autoDraw = True
+94.6586 	EXP 	image_2: autoDraw = False
+94.6744 	EXP 	noise: autoDraw = True
+95.6408 	EXP 	New trial (rep=0, index=21): OrderedDict([('stimFile', 'stims/8380.jpg'), ('Valence', 'Positive')])
+95.7055 	EXP 	noise: autoDraw = False
+95.7055 	EXP 	image_2: autoDraw = False
+95.7055 	EXP 	noise: autoDraw = False
+95.7055 	EXP 	image_2: image = 'stims/8380.jpg'
+95.7055 	EXP 	image_2: autoDraw = True
+96.3544 	EXP 	image_2: autoDraw = False
+96.3711 	EXP 	noise: autoDraw = True
+97.3368 	EXP 	New trial (rep=0, index=22): OrderedDict([('stimFile', 'stims/8540.jpg'), ('Valence', 'Positive')])
+97.4020 	EXP 	noise: autoDraw = False
+97.4020 	EXP 	image_2: autoDraw = False
+97.4020 	EXP 	noise: autoDraw = False
+97.4020 	EXP 	image_2: image = 'stims/8540.jpg'
+97.4020 	EXP 	image_2: autoDraw = True
+98.0508 	EXP 	image_2: autoDraw = False
+98.0672 	EXP 	noise: autoDraw = True
+99.0325 	EXP 	New trial (rep=0, index=23): OrderedDict([('stimFile', 'stims/8200.jpg'), ('Valence', 'Positive')])
+99.0815 	EXP 	noise: autoDraw = False
+99.0815 	EXP 	image_2: autoDraw = False
+99.0815 	EXP 	noise: autoDraw = False
+99.0815 	EXP 	image_2: image = 'stims/8200.jpg'
+99.0815 	EXP 	image_2: autoDraw = True
+99.7464 	EXP 	image_2: autoDraw = False
+99.7632 	EXP 	noise: autoDraw = True
+100.7287 	EXP 	New trial (rep=0, index=24): OrderedDict([('stimFile', 'stims/7450.jpg'), ('Valence', 'Positive')])
+100.7934 	EXP 	noise: autoDraw = False
+100.7934 	EXP 	image_2: autoDraw = False
+100.7934 	EXP 	noise: autoDraw = False
+100.7934 	EXP 	image_2: image = 'stims/7450.jpg'
+100.7934 	EXP 	image_2: autoDraw = True
+101.4425 	EXP 	image_2: autoDraw = False
+101.4591 	EXP 	noise: autoDraw = True
+102.4243 	EXP 	New trial (rep=0, index=25): OrderedDict([('stimFile', 'stims/7230.jpg'), ('Valence', 'Positive')])
+102.4733 	EXP 	noise: autoDraw = False
+102.4733 	EXP 	image_2: autoDraw = False
+102.4733 	EXP 	noise: autoDraw = False
+102.4733 	EXP 	image_2: image = 'stims/7230.jpg'
+102.4733 	EXP 	image_2: autoDraw = True
+103.1385 	EXP 	image_2: autoDraw = False
+103.1550 	EXP 	noise: autoDraw = True
+104.1207 	EXP 	New trial (rep=0, index=26): OrderedDict([('stimFile', 'stims/7480.jpg'), ('Valence', 'Positive')])
+104.1860 	EXP 	noise: autoDraw = False
+104.1860 	EXP 	image_2: autoDraw = False
+104.1860 	EXP 	noise: autoDraw = False
+104.1860 	EXP 	image_2: image = 'stims/7480.jpg'
+104.1860 	EXP 	image_2: autoDraw = True
+104.8346 	EXP 	image_2: autoDraw = False
+104.8511 	EXP 	noise: autoDraw = True
+105.8167 	EXP 	New trial (rep=0, index=27): OrderedDict([('stimFile', 'stims/8470.jpg'), ('Valence', 'Positive')])
+105.8816 	EXP 	noise: autoDraw = False
+105.8816 	EXP 	image_2: autoDraw = False
+105.8816 	EXP 	noise: autoDraw = False
+105.8816 	EXP 	image_2: image = 'stims/8470.jpg'
+105.8816 	EXP 	image_2: autoDraw = True
+106.5306 	EXP 	image_2: autoDraw = False
+106.5473 	EXP 	noise: autoDraw = True
+107.5127 	EXP 	New trial (rep=0, index=28): OrderedDict([('stimFile', 'stims/4653.jpg'), ('Valence', 'Positive')])
+107.5781 	EXP 	noise: autoDraw = False
+107.5781 	EXP 	image_2: autoDraw = False
+107.5781 	EXP 	noise: autoDraw = False
+107.5781 	EXP 	image_2: image = 'stims/4653.jpg'
+107.5781 	EXP 	image_2: autoDraw = True
+108.2264 	EXP 	image_2: autoDraw = False
+108.2433 	EXP 	noise: autoDraw = True
+109.2086 	EXP 	New trial (rep=0, index=29): OrderedDict([('stimFile', 'stims/4651.jpg'), ('Valence', 'Positive')])
+109.2577 	EXP 	noise: autoDraw = False
+109.2577 	EXP 	image_2: autoDraw = False
+109.2577 	EXP 	noise: autoDraw = False
+109.2577 	EXP 	image_2: image = 'stims/4651.jpg'
+109.2577 	EXP 	image_2: autoDraw = True
+109.9227 	EXP 	image_2: autoDraw = False
+109.9392 	EXP 	noise: autoDraw = True
+110.9048 	EXP 	New trial (rep=0, index=30): OrderedDict([('stimFile', 'stims/4656.jpg'), ('Valence', 'Positive')])
+110.9531 	EXP 	noise: autoDraw = False
+110.9531 	EXP 	image_2: autoDraw = False
+110.9531 	EXP 	noise: autoDraw = False
+110.9531 	EXP 	image_2: image = 'stims/4656.jpg'
+110.9531 	EXP 	image_2: autoDraw = True
+111.6187 	EXP 	image_2: autoDraw = False
+111.6353 	EXP 	noise: autoDraw = True
+112.6008 	EXP 	New trial (rep=0, index=31): OrderedDict([('stimFile', 'stims/8500.jpg'), ('Valence', 'Positive')])
+112.6662 	EXP 	noise: autoDraw = False
+112.6662 	EXP 	image_2: autoDraw = False
+112.6662 	EXP 	noise: autoDraw = False
+112.6662 	EXP 	image_2: image = 'stims/8500.jpg'
+112.6662 	EXP 	image_2: autoDraw = True
+113.3145 	EXP 	image_2: autoDraw = False
+113.3310 	EXP 	noise: autoDraw = True
+114.2967 	EXP 	New trial (rep=0, index=32): OrderedDict([('stimFile', 'stims/4640.jpg'), ('Valence', 'Positive')])
+114.3621 	EXP 	noise: autoDraw = False
+114.3621 	EXP 	image_2: autoDraw = False
+114.3621 	EXP 	noise: autoDraw = False
+114.3621 	EXP 	image_2: image = 'stims/4640.jpg'
+114.3621 	EXP 	image_2: autoDraw = True
+115.0106 	EXP 	image_2: autoDraw = False
+115.0272 	EXP 	noise: autoDraw = True
+115.9929 	EXP 	New trial (rep=0, index=2): OrderedDict([('condsFile', 'negativeBlock.csv'), ('readyMsg', 'Pronto')])
+116.0083 	EXP 	noise: autoDraw = False
+116.0083 	EXP 	image_2: autoDraw = False
+116.0083 	EXP 	noise: autoDraw = False
+116.0083 	EXP 	textTask: autoDraw = True
+132.9716 	DATA 	Keypress: t
+132.9775 	EXP 	Imported negativeBlock.csv as conditions, 22 conditions, 2 params
+132.9781 	EXP 	Created sequence: random, trialTypes=22, nReps=1, seed=None
+132.9786 	EXP 	New trial (rep=0, index=0): OrderedDict([('stimFile', 'stims/5535.jpg'), ('Valence', 'Negative')])
+133.0338 	EXP 	textTask: autoDraw = False
+133.0338 	EXP 	image_2: image = 'stims/5535.jpg'
+133.0338 	EXP 	image_2: autoDraw = True
+133.6834 	EXP 	image_2: autoDraw = False
+133.6999 	EXP 	noise: autoDraw = True
+134.6814 	EXP 	New trial (rep=0, index=1): OrderedDict([('stimFile', 'stims/4003.jpg'), ('Valence', 'Negative')])
+134.7473 	EXP 	image_2: autoDraw = False
+134.7473 	EXP 	noise: autoDraw = False
+134.7473 	EXP 	image_2: image = 'stims/4003.jpg'
+134.7473 	EXP 	image_2: autoDraw = True
+135.3957 	EXP 	image_2: autoDraw = False
+135.4121 	EXP 	noise: autoDraw = True
+136.3774 	EXP 	New trial (rep=0, index=2): OrderedDict([('stimFile', 'stims/4000.jpg'), ('Valence', 'Negative')])
+136.4265 	EXP 	image_2: autoDraw = False
+136.4265 	EXP 	noise: autoDraw = False
+136.4265 	EXP 	image_2: image = 'stims/4000.jpg'
+136.4265 	EXP 	image_2: autoDraw = True
+137.0919 	EXP 	image_2: autoDraw = False
+137.1085 	EXP 	noise: autoDraw = True
+138.0739 	EXP 	New trial (rep=0, index=3): OrderedDict([('stimFile', 'stims/4525.jpg'), ('Valence', 'Negative')])
+138.1561 	EXP 	noise: autoDraw = False
+138.1561 	EXP 	image_2: autoDraw = False
+138.1561 	EXP 	noise: autoDraw = False
+138.1561 	EXP 	image_2: image = 'stims/4525.jpg'
+138.1561 	EXP 	image_2: autoDraw = True
+138.7878 	EXP 	image_2: autoDraw = False
+138.8047 	EXP 	noise: autoDraw = True
+139.7700 	EXP 	New trial (rep=0, index=4): OrderedDict([('stimFile', 'stims/2850.jpg'), ('Valence', 'Negative')])
+139.8355 	EXP 	noise: autoDraw = False
+139.8355 	EXP 	image_2: autoDraw = False
+139.8355 	EXP 	noise: autoDraw = False
+139.8355 	EXP 	image_2: image = 'stims/2850.jpg'
+139.8355 	EXP 	image_2: autoDraw = True
+140.4830 	EXP 	image_2: autoDraw = False
+140.4996 	EXP 	noise: autoDraw = True
+141.4660 	EXP 	New trial (rep=0, index=5): OrderedDict([('stimFile', 'stims/4001.jpg'), ('Valence', 'Negative')])
+141.5150 	EXP 	noise: autoDraw = False
+141.5150 	EXP 	image_2: autoDraw = False
+141.5150 	EXP 	noise: autoDraw = False
+141.5150 	EXP 	image_2: image = 'stims/4001.jpg'
+141.5150 	EXP 	image_2: autoDraw = True
+142.1796 	EXP 	image_2: autoDraw = False
+142.1965 	EXP 	noise: autoDraw = True
+143.1610 	EXP 	New trial (rep=0, index=6): OrderedDict([('stimFile', 'stims/4180.jpg'), ('Valence', 'Negative')])
+143.2269 	EXP 	noise: autoDraw = False
+143.2269 	EXP 	image_2: autoDraw = False
+143.2269 	EXP 	noise: autoDraw = False
+143.2269 	EXP 	image_2: image = 'stims/4180.jpg'
+143.2269 	EXP 	image_2: autoDraw = True
+143.8760 	EXP 	image_2: autoDraw = False
+143.8916 	EXP 	noise: autoDraw = True
+144.8580 	EXP 	New trial (rep=0, index=7): OrderedDict([('stimFile', 'stims/7820.jpg'), ('Valence', 'Negative')])
+144.9233 	EXP 	noise: autoDraw = False
+144.9233 	EXP 	image_2: autoDraw = False
+144.9233 	EXP 	noise: autoDraw = False
+144.9233 	EXP 	image_2: image = 'stims/7820.jpg'
+144.9233 	EXP 	image_2: autoDraw = True
+145.5720 	EXP 	image_2: autoDraw = False
+145.5886 	EXP 	noise: autoDraw = True
+146.5539 	EXP 	New trial (rep=0, index=8): OrderedDict([('stimFile', 'stims/7190.jpg'), ('Valence', 'Negative')])
+146.6189 	EXP 	noise: autoDraw = False
+146.6189 	EXP 	image_2: autoDraw = False
+146.6189 	EXP 	noise: autoDraw = False
+146.6189 	EXP 	image_2: image = 'stims/7190.jpg'
+146.6189 	EXP 	image_2: autoDraw = True
+147.2674 	EXP 	image_2: autoDraw = False
+147.2843 	EXP 	noise: autoDraw = True
+148.2504 	EXP 	New trial (rep=0, index=9): OrderedDict([('stimFile', 'stims/4490.jpg'), ('Valence', 'Negative')])
+148.3154 	EXP 	noise: autoDraw = False
+148.3154 	EXP 	image_2: autoDraw = False
+148.3154 	EXP 	noise: autoDraw = False
+148.3154 	EXP 	image_2: image = 'stims/4490.jpg'
+148.3154 	EXP 	image_2: autoDraw = True
+148.9639 	EXP 	image_2: autoDraw = False
+148.9804 	EXP 	noise: autoDraw = True
+149.9461 	EXP 	New trial (rep=0, index=10): OrderedDict([('stimFile', 'stims/7830.jpg'), ('Valence', 'Negative')])
+150.0114 	EXP 	noise: autoDraw = False
+150.0114 	EXP 	image_2: autoDraw = False
+150.0114 	EXP 	noise: autoDraw = False
+150.0114 	EXP 	image_2: image = 'stims/7830.jpg'
+150.0114 	EXP 	image_2: autoDraw = True
+150.6600 	EXP 	image_2: autoDraw = False
+150.6765 	EXP 	noise: autoDraw = True
+151.6419 	EXP 	New trial (rep=0, index=11): OrderedDict([('stimFile', 'stims/6314.jpg'), ('Valence', 'Negative')])
+151.6897 	EXP 	noise: autoDraw = False
+151.6897 	EXP 	image_2: autoDraw = False
+151.6897 	EXP 	noise: autoDraw = False
+151.6897 	EXP 	image_2: image = 'stims/6314.jpg'
+151.6897 	EXP 	image_2: autoDraw = True
+152.3562 	EXP 	image_2: autoDraw = False
+152.3726 	EXP 	noise: autoDraw = True
+153.3376 	EXP 	New trial (rep=0, index=12): OrderedDict([('stimFile', 'stims/4530.jpg'), ('Valence', 'Negative')])
+153.4033 	EXP 	noise: autoDraw = False
+153.4033 	EXP 	image_2: autoDraw = False
+153.4033 	EXP 	noise: autoDraw = False
+153.4033 	EXP 	image_2: image = 'stims/4530.jpg'
+153.4033 	EXP 	image_2: autoDraw = True
+154.0519 	EXP 	image_2: autoDraw = False
+154.0686 	EXP 	noise: autoDraw = True
+155.0338 	EXP 	New trial (rep=0, index=13): OrderedDict([('stimFile', 'stims/8116.jpg'), ('Valence', 'Negative')])
+155.0993 	EXP 	noise: autoDraw = False
+155.0993 	EXP 	image_2: autoDraw = False
+155.0993 	EXP 	noise: autoDraw = False
+155.0993 	EXP 	image_2: image = 'stims/8116.jpg'
+155.0993 	EXP 	image_2: autoDraw = True
+155.7478 	EXP 	image_2: autoDraw = False
+155.7644 	EXP 	noise: autoDraw = True
+156.7301 	EXP 	New trial (rep=0, index=14): OrderedDict([('stimFile', 'stims/4520.jpg'), ('Valence', 'Negative')])
+156.7954 	EXP 	noise: autoDraw = False
+156.7954 	EXP 	image_2: autoDraw = False
+156.7954 	EXP 	noise: autoDraw = False
+156.7954 	EXP 	image_2: image = 'stims/4520.jpg'
+156.7954 	EXP 	image_2: autoDraw = True
+157.4440 	EXP 	image_2: autoDraw = False
+157.4606 	EXP 	noise: autoDraw = True
+158.4261 	EXP 	New trial (rep=0, index=15): OrderedDict([('stimFile', 'stims/9045.jpg'), ('Valence', 'Negative')])
+158.4741 	EXP 	noise: autoDraw = False
+158.4741 	EXP 	image_2: autoDraw = False
+158.4741 	EXP 	noise: autoDraw = False
+158.4741 	EXP 	image_2: image = 'stims/9045.jpg'
+158.4741 	EXP 	image_2: autoDraw = True
+159.1400 	EXP 	image_2: autoDraw = False
+159.1566 	EXP 	noise: autoDraw = True
+160.1221 	EXP 	New trial (rep=0, index=16): OrderedDict([('stimFile', 'stims/7180.jpg'), ('Valence', 'Negative')])
+160.1700 	EXP 	noise: autoDraw = False
+160.1700 	EXP 	image_2: autoDraw = False
+160.1700 	EXP 	noise: autoDraw = False
+160.1700 	EXP 	image_2: image = 'stims/7180.jpg'
+160.1700 	EXP 	image_2: autoDraw = True
+160.8358 	EXP 	image_2: autoDraw = False
+160.8526 	EXP 	noise: autoDraw = True
+161.8181 	EXP 	New trial (rep=0, index=17): OrderedDict([('stimFile', 'stims/7237.jpg'), ('Valence', 'Negative')])
+161.8834 	EXP 	noise: autoDraw = False
+161.8834 	EXP 	image_2: autoDraw = False
+161.8834 	EXP 	noise: autoDraw = False
+161.8834 	EXP 	image_2: image = 'stims/7237.jpg'
+161.8834 	EXP 	image_2: autoDraw = True
+162.5319 	EXP 	image_2: autoDraw = False
+162.5487 	EXP 	noise: autoDraw = True
+163.5134 	EXP 	New trial (rep=0, index=18): OrderedDict([('stimFile', 'stims/7496.jpg'), ('Valence', 'Negative')])
+163.5794 	EXP 	noise: autoDraw = False
+163.5794 	EXP 	image_2: autoDraw = False
+163.5794 	EXP 	noise: autoDraw = False
+163.5794 	EXP 	image_2: image = 'stims/7496.jpg'
+163.5794 	EXP 	image_2: autoDraw = True
+164.2279 	EXP 	image_2: autoDraw = False
+164.2447 	EXP 	noise: autoDraw = True
+165.2103 	EXP 	New trial (rep=0, index=19): OrderedDict([('stimFile', 'stims/2312.jpg'), ('Valence', 'Negative')])
+165.2592 	EXP 	noise: autoDraw = False
+165.2592 	EXP 	image_2: autoDraw = False
+165.2592 	EXP 	noise: autoDraw = False
+165.2592 	EXP 	image_2: image = 'stims/2312.jpg'
+165.2592 	EXP 	image_2: autoDraw = True
+165.9232 	EXP 	image_2: autoDraw = False
+165.9405 	EXP 	noise: autoDraw = True
+166.9055 	EXP 	New trial (rep=0, index=20): OrderedDict([('stimFile', 'stims/8050.jpg'), ('Valence', 'Negative')])
+166.9545 	EXP 	noise: autoDraw = False
+166.9545 	EXP 	image_2: autoDraw = False
+166.9545 	EXP 	noise: autoDraw = False
+166.9545 	EXP 	image_2: image = 'stims/8050.jpg'
+166.9545 	EXP 	image_2: autoDraw = True
+167.6199 	EXP 	image_2: autoDraw = False
+167.6365 	EXP 	noise: autoDraw = True
+168.6019 	EXP 	New trial (rep=0, index=21): OrderedDict([('stimFile', 'stims/7130.jpg'), ('Valence', 'Negative')])
+168.6665 	EXP 	noise: autoDraw = False
+168.6665 	EXP 	image_2: autoDraw = False
+168.6665 	EXP 	noise: autoDraw = False
+168.6665 	EXP 	image_2: image = 'stims/7130.jpg'
+168.6665 	EXP 	image_2: autoDraw = True
+169.3159 	EXP 	image_2: autoDraw = False
+169.3324 	EXP 	noise: autoDraw = True
+170.2980 	EXP 	New trial (rep=0, index=3): OrderedDict([('condsFile', 'NeutralBlock.csv'), ('readyMsg', 'Pronto')])
+170.3135 	EXP 	noise: autoDraw = False
+170.3135 	EXP 	image_2: autoDraw = False
+170.3135 	EXP 	noise: autoDraw = False
+170.3135 	EXP 	textTask: autoDraw = True
+175.0906 	DATA 	Keypress: t
+175.1079 	EXP 	Imported NeutralBlock.csv as conditions, 22 conditions, 2 params
+175.1086 	EXP 	Created sequence: random, trialTypes=22, nReps=1, seed=None
+175.1090 	EXP 	New trial (rep=0, index=0): OrderedDict([('stimFile', 'stims/6314.jpg'), ('Valence', 'Neutral')])
+175.1508 	EXP 	textTask: autoDraw = False
+175.1508 	EXP 	image_2: image = 'stims/6314.jpg'
+175.1508 	EXP 	image_2: autoDraw = True
+175.8169 	EXP 	image_2: autoDraw = False
+175.8334 	EXP 	noise: autoDraw = True
+176.7993 	EXP 	New trial (rep=0, index=1): OrderedDict([('stimFile', 'stims/9045.jpg'), ('Valence', 'Neutral')])
+176.8481 	EXP 	noise: autoDraw = False
+176.8481 	EXP 	image_2: autoDraw = False
+176.8481 	EXP 	noise: autoDraw = False
+176.8481 	EXP 	image_2: image = 'stims/9045.jpg'
+176.8481 	EXP 	image_2: autoDraw = True
+177.5132 	EXP 	image_2: autoDraw = False
+177.5298 	EXP 	noise: autoDraw = True
+178.4954 	EXP 	New trial (rep=0, index=2): OrderedDict([('stimFile', 'stims/2312.jpg'), ('Valence', 'Neutral')])
+178.5439 	EXP 	noise: autoDraw = False
+178.5439 	EXP 	image_2: autoDraw = False
+178.5439 	EXP 	noise: autoDraw = False
+178.5439 	EXP 	image_2: image = 'stims/2312.jpg'
+178.5439 	EXP 	image_2: autoDraw = True
+179.2093 	EXP 	image_2: autoDraw = False
+179.2261 	EXP 	noise: autoDraw = True
+180.1915 	EXP 	New trial (rep=0, index=3): OrderedDict([('stimFile', 'stims/7190.jpg'), ('Valence', 'Neutral')])
+180.2397 	EXP 	noise: autoDraw = False
+180.2397 	EXP 	image_2: autoDraw = False
+180.2397 	EXP 	noise: autoDraw = False
+180.2397 	EXP 	image_2: image = 'stims/7190.jpg'
+180.2397 	EXP 	image_2: autoDraw = True
+180.9052 	EXP 	image_2: autoDraw = False
+180.9216 	EXP 	noise: autoDraw = True
+181.8877 	EXP 	New trial (rep=0, index=4): OrderedDict([('stimFile', 'stims/7180.jpg'), ('Valence', 'Neutral')])
+181.9361 	EXP 	noise: autoDraw = False
+181.9361 	EXP 	image_2: autoDraw = False
+181.9361 	EXP 	noise: autoDraw = False
+181.9361 	EXP 	image_2: image = 'stims/7180.jpg'
+181.9361 	EXP 	image_2: autoDraw = True
+182.6016 	EXP 	image_2: autoDraw = False
+182.6177 	EXP 	noise: autoDraw = True
+183.5835 	EXP 	New trial (rep=0, index=5): OrderedDict([('stimFile', 'stims/4180.jpg'), ('Valence', 'Neutral')])
+183.6321 	EXP 	noise: autoDraw = False
+183.6321 	EXP 	image_2: autoDraw = False
+183.6321 	EXP 	noise: autoDraw = False
+183.6321 	EXP 	image_2: image = 'stims/4180.jpg'
+183.6321 	EXP 	image_2: autoDraw = True
+184.2973 	EXP 	image_2: autoDraw = False
+184.3138 	EXP 	noise: autoDraw = True
+185.2786 	EXP 	New trial (rep=0, index=6): OrderedDict([('stimFile', 'stims/4000.jpg'), ('Valence', 'Neutral')])
+185.3271 	EXP 	noise: autoDraw = False
+185.3271 	EXP 	image_2: autoDraw = False
+185.3271 	EXP 	noise: autoDraw = False
+185.3271 	EXP 	image_2: image = 'stims/4000.jpg'
+185.3271 	EXP 	image_2: autoDraw = True
+185.9934 	EXP 	image_2: autoDraw = False
+186.0100 	EXP 	noise: autoDraw = True
+186.9754 	EXP 	New trial (rep=0, index=7): OrderedDict([('stimFile', 'stims/4520.jpg'), ('Valence', 'Neutral')])
+187.0240 	EXP 	noise: autoDraw = False
+187.0240 	EXP 	image_2: autoDraw = False
+187.0240 	EXP 	noise: autoDraw = False
+187.0240 	EXP 	image_2: image = 'stims/4520.jpg'
+187.0240 	EXP 	image_2: autoDraw = True
+187.6894 	EXP 	image_2: autoDraw = False
+187.7060 	EXP 	noise: autoDraw = True
+188.6716 	EXP 	New trial (rep=0, index=8): OrderedDict([('stimFile', 'stims/4530.jpg'), ('Valence', 'Neutral')])
+188.7199 	EXP 	noise: autoDraw = False
+188.7199 	EXP 	image_2: autoDraw = False
+188.7199 	EXP 	noise: autoDraw = False
+188.7199 	EXP 	image_2: image = 'stims/4530.jpg'
+188.7199 	EXP 	image_2: autoDraw = True
+189.3849 	EXP 	image_2: autoDraw = False
+189.4016 	EXP 	noise: autoDraw = True
+190.3672 	EXP 	New trial (rep=0, index=9): OrderedDict([('stimFile', 'stims/7496.jpg'), ('Valence', 'Neutral')])
+190.4152 	EXP 	noise: autoDraw = False
+190.4152 	EXP 	image_2: autoDraw = False
+190.4152 	EXP 	noise: autoDraw = False
+190.4152 	EXP 	image_2: image = 'stims/7496.jpg'
+190.4152 	EXP 	image_2: autoDraw = True
+191.0812 	EXP 	image_2: autoDraw = False
+191.0979 	EXP 	noise: autoDraw = True
+192.0634 	EXP 	New trial (rep=0, index=10): OrderedDict([('stimFile', 'stims/7237.jpg'), ('Valence', 'Neutral')])
+192.1283 	EXP 	noise: autoDraw = False
+192.1283 	EXP 	image_2: autoDraw = False
+192.1283 	EXP 	noise: autoDraw = False
+192.1283 	EXP 	image_2: image = 'stims/7237.jpg'
+192.1283 	EXP 	image_2: autoDraw = True
+192.7773 	EXP 	image_2: autoDraw = False
+192.7941 	EXP 	noise: autoDraw = True
+193.7595 	EXP 	New trial (rep=0, index=11): OrderedDict([('stimFile', 'stims/4490.jpg'), ('Valence', 'Neutral')])
+193.8079 	EXP 	noise: autoDraw = False
+193.8079 	EXP 	image_2: autoDraw = False
+193.8079 	EXP 	noise: autoDraw = False
+193.8079 	EXP 	image_2: image = 'stims/4490.jpg'
+193.8079 	EXP 	image_2: autoDraw = True
+194.4733 	EXP 	image_2: autoDraw = False
+194.4900 	EXP 	noise: autoDraw = True
+195.4547 	EXP 	New trial (rep=0, index=12): OrderedDict([('stimFile', 'stims/5535.jpg'), ('Valence', 'Neutral')])
+195.5033 	EXP 	noise: autoDraw = False
+195.5033 	EXP 	image_2: autoDraw = False
+195.5033 	EXP 	noise: autoDraw = False
+195.5033 	EXP 	image_2: image = 'stims/5535.jpg'
+195.5033 	EXP 	image_2: autoDraw = True
+196.1693 	EXP 	image_2: autoDraw = False
+196.1849 	EXP 	noise: autoDraw = True
+197.1515 	EXP 	New trial (rep=0, index=13): OrderedDict([('stimFile', 'stims/7130.jpg'), ('Valence', 'Neutral')])
+197.1998 	EXP 	noise: autoDraw = False
+197.1998 	EXP 	image_2: autoDraw = False
+197.1998 	EXP 	noise: autoDraw = False
+197.1998 	EXP 	image_2: image = 'stims/7130.jpg'
+197.1998 	EXP 	image_2: autoDraw = True
+197.8653 	EXP 	image_2: autoDraw = False
+197.8821 	EXP 	noise: autoDraw = True
+198.8475 	EXP 	New trial (rep=0, index=14): OrderedDict([('stimFile', 'stims/4525.jpg'), ('Valence', 'Neutral')])
+198.9291 	EXP 	noise: autoDraw = False
+198.9291 	EXP 	image_2: autoDraw = False
+198.9291 	EXP 	noise: autoDraw = False
+198.9291 	EXP 	image_2: image = 'stims/4525.jpg'
+198.9291 	EXP 	image_2: autoDraw = True
+199.5612 	EXP 	image_2: autoDraw = False
+199.5771 	EXP 	noise: autoDraw = True
+200.5433 	EXP 	New trial (rep=0, index=15): OrderedDict([('stimFile', 'stims/7830.jpg'), ('Valence', 'Neutral')])
+200.5918 	EXP 	noise: autoDraw = False
+200.5918 	EXP 	image_2: autoDraw = False
+200.5918 	EXP 	noise: autoDraw = False
+200.5918 	EXP 	image_2: image = 'stims/7830.jpg'
+200.5918 	EXP 	image_2: autoDraw = True
+201.2573 	EXP 	image_2: autoDraw = False
+201.2739 	EXP 	noise: autoDraw = True
+202.2395 	EXP 	New trial (rep=0, index=16): OrderedDict([('stimFile', 'stims/2850.jpg'), ('Valence', 'Neutral')])
+202.2882 	EXP 	noise: autoDraw = False
+202.2882 	EXP 	image_2: autoDraw = False
+202.2882 	EXP 	noise: autoDraw = False
+202.2882 	EXP 	image_2: image = 'stims/2850.jpg'
+202.2882 	EXP 	image_2: autoDraw = True
+202.9531 	EXP 	image_2: autoDraw = False
+202.9699 	EXP 	noise: autoDraw = True
+203.9355 	EXP 	New trial (rep=0, index=17): OrderedDict([('stimFile', 'stims/8050.jpg'), ('Valence', 'Neutral')])
+203.9841 	EXP 	noise: autoDraw = False
+203.9841 	EXP 	image_2: autoDraw = False
+203.9841 	EXP 	noise: autoDraw = False
+203.9841 	EXP 	image_2: image = 'stims/8050.jpg'
+203.9841 	EXP 	image_2: autoDraw = True
+204.6489 	EXP 	image_2: autoDraw = False
+204.6648 	EXP 	noise: autoDraw = True
+205.6310 	EXP 	New trial (rep=0, index=18): OrderedDict([('stimFile', 'stims/4003.jpg'), ('Valence', 'Neutral')])
+205.6960 	EXP 	noise: autoDraw = False
+205.6960 	EXP 	image_2: autoDraw = False
+205.6960 	EXP 	noise: autoDraw = False
+205.6960 	EXP 	image_2: image = 'stims/4003.jpg'
+205.6960 	EXP 	image_2: autoDraw = True
+206.3453 	EXP 	image_2: autoDraw = False
+206.3621 	EXP 	noise: autoDraw = True
+207.3277 	EXP 	New trial (rep=0, index=19): OrderedDict([('stimFile', 'stims/4001.jpg'), ('Valence', 'Neutral')])
+207.3763 	EXP 	noise: autoDraw = False
+207.3763 	EXP 	image_2: autoDraw = False
+207.3763 	EXP 	noise: autoDraw = False
+207.3763 	EXP 	image_2: image = 'stims/4001.jpg'
+207.3763 	EXP 	image_2: autoDraw = True
+208.0413 	EXP 	image_2: autoDraw = False
+208.0580 	EXP 	noise: autoDraw = True
+209.0237 	EXP 	New trial (rep=0, index=20): OrderedDict([('stimFile', 'stims/8116.jpg'), ('Valence', 'Neutral')])
+209.0887 	EXP 	noise: autoDraw = False
+209.0887 	EXP 	image_2: autoDraw = False
+209.0887 	EXP 	noise: autoDraw = False
+209.0887 	EXP 	image_2: image = 'stims/8116.jpg'
+209.0887 	EXP 	image_2: autoDraw = True
+209.7375 	EXP 	image_2: autoDraw = False
+209.7538 	EXP 	noise: autoDraw = True
+210.7195 	EXP 	New trial (rep=0, index=21): OrderedDict([('stimFile', 'stims/7820.jpg'), ('Valence', 'Neutral')])
+210.7848 	EXP 	noise: autoDraw = False
+210.7848 	EXP 	image_2: autoDraw = False
+210.7848 	EXP 	noise: autoDraw = False
+210.7848 	EXP 	image_2: image = 'stims/7820.jpg'
+210.7848 	EXP 	image_2: autoDraw = True
+211.4333 	EXP 	image_2: autoDraw = False
+211.4500 	EXP 	noise: autoDraw = True
+212.4309 	EXP 	noise: autoDraw = False
+212.4309 	EXP 	image_2: autoDraw = False
+212.4309 	EXP 	noise: autoDraw = False
+212.4309 	EXP 	textThanks: autoDraw = True
+222.7132 	EXP 	window1: mouseVisible = True

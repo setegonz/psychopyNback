@@ -1,0 +1,117 @@
+7.3994 	WARNING 	User requested fullscreen with size [1440  900], but screen is actually [1280, 800]. Using actual size
+8.1313 	EXP 	Created window1 = Window(allowGUI=False, allowStencil=False, args=UNKNOWN, autoLog=True, bitsMode=UNKNOWN, blendMode='avg', color=array([0., 0., 0.]), colorSpace='rgb', fullscr=<method-wrapper '__getattribute__' of attributeSetter object at 0x123bf3d30>, gamma=None, kwargs=UNKNOWN, lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x12737e278>, multiSample=False, name='window1', numSamples=2, pos=[0.0, 0.0], screen=0, size=array([1280,  800]), stereo=False, units='norm', useFBO=True, useRetina=False, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+8.1313 	EXP 	window1: recordFrameIntervals = False
+8.2967 	EXP 	window1: recordFrameIntervals = True
+8.4799 	EXP 	window1: recordFrameIntervals = False
+8.6008 	EXP 	Created text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='text', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255., 255.]), text='default text', units='norm', win=Window(...), wrapWidth=1)
+8.6771 	EXP 	Created textPractice = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='textPractice', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255., 255.]), text=str(...), units='norm', win=Window(...), wrapWidth=1)
+8.6878 	EXP 	Created image = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='image', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([0.5, 0.5]), texRes=128, units='height', win=Window(...))
+8.6982 	EXP 	Created noise = NoiseStim(__class__=<class 'psychopy.visual.noise.NoiseStim'>, autoDraw=False, autoLog=True, blendmode='avg', color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, interpolate=False, mask='none', maskParams=None, name='noise', opacity=1.0, ori=0.0, phase=array([0., 0.]), pos=array([0., 0.]), rgbPedestal=array([0., 0., 0.]), sf=array([1., 1.]), size=array([0.5, 0.5]), tex='sin', texRes=128, units='norm', win=Window(...))
+8.7587 	EXP 	Created textExperiment = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='textExperiment', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255., 255.]), text=str(...), units='norm', win=Window(...), wrapWidth=1)
+8.7651 	EXP 	Created textThanks = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='textThanks', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255., 255.]), text='Obrigado', units='norm', win=Window(...), wrapWidth=1)
+8.7951 	EXP 	noise: blendmode = 'avg'
+8.7951 	EXP 	noise: mask = None
+8.7951 	EXP 	noise: texRes = 128
+8.7951 	EXP 	noise: noiseType = 'Binary'
+8.7951 	EXP 	noise: noiseImage = None
+8.7951 	EXP 	noise: noiseElementSize = 0.0625
+8.7951 	EXP 	noise: noiseBaseSf = 8.0
+8.7951 	EXP 	noise: noiseBW = 1.0
+8.7951 	EXP 	noise: noiseBWO = 1.0
+8.7951 	EXP 	noise: noiseFractalPower = 0.0
+8.7951 	EXP 	noise: noiseFilterUpper = 8.0
+8.7951 	EXP 	noise: noiseFilterLower = 1.0
+8.7951 	EXP 	noise: noiseFilterOrder = 0.0
+8.7951 	EXP 	noise: noiseClip = 3.0
+8.7951 	EXP 	noise: tex = array([[ 1., -1., -1., -1., -1., -1., -1., -1.],
+       [-1.,  1., -1., -1.,  1.,  1.,  1., -1.],
+       [ 1., -1.,  1., -1.,  1., -1., -1., -1.],
+       [ 1., -1.,  1.,  1., -1., -1., -1.,  1.],
+       [-1.,  1.,  1., -1.,  1., -1.,  1., -1.],
+       [ 1.,  1.,  1., -1.,  1., -1.,  1.,  1.],
+       [-1.,  1.,  1.,  1., -1., -1.,  1.,  1.],
+       [ 1.,  1., -1.,  1., -1.,  1.,  1., -1.]])
+8.7951 	EXP 	noise: tex = array([[ 1.,  1., -1.,  1.,  1.,  1.,  1.,  1.],
+       [-1., -1., -1., -1., -1.,  1., -1.,  1.],
+       [-1.,  1., -1.,  1., -1., -1., -1., -1.],
+       [-1., -1., -1.,  1.,  1.,  1.,  1., -1.],
+       [ 1.,  1., -1.,  1., -1.,  1., -1., -1.],
+       [-1.,  1.,  1., -1., -1., -1.,  1.,  1.],
+       [ 1.,  1.,  1.,  1.,  1.,  1., -1., -1.],
+       [ 1.,  1.,  1., -1., -1., -1., -1., -1.]])
+8.7951 	EXP 	text: text = 'Bem vindo. \nLeia as instrucoes no papel.'
+8.7951 	EXP 	text: autoDraw = True
+10.5151 	DATA 	Keypress: t
+10.5237 	EXP 	text: autoDraw = False
+10.5237 	EXP 	textPractice: autoDraw = True
+11.4089 	DATA 	Keypress: t
+11.4168 	EXP 	Imported practiceBlock.csv as conditions, 22 conditions, 2 params
+11.4175 	EXP 	Created sequence: random, trialTypes=22, nReps=5, seed=None
+11.4180 	EXP 	New trial (rep=0, index=0): OrderedDict([('stimFile', 'stims/006.i.jpg'), ('Valence', 'Practice')])
+11.4887 	EXP 	textPractice: autoDraw = False
+11.4887 	EXP 	image: image = 'stims/006.i.jpg'
+11.4887 	EXP 	image: autoDraw = True
+12.1374 	EXP 	image: autoDraw = False
+12.1374 	EXP 	noise: autoDraw = True
+12.6205 	EXP 	New trial (rep=0, index=1): OrderedDict([('stimFile', 'stims/012.i.jpg'), ('Valence', 'Practice')])
+12.6363 	EXP 	image: autoDraw = False
+12.6363 	EXP 	noise: autoDraw = False
+12.6363 	EXP 	image: image = 'stims/012.i.jpg'
+12.6363 	EXP 	image: autoDraw = True
+13.3348 	EXP 	image: autoDraw = False
+13.3516 	EXP 	noise: autoDraw = True
+13.8181 	EXP 	New trial (rep=0, index=2): OrderedDict([('stimFile', 'stims/011.i.jpg'), ('Valence', 'Practice')])
+13.8502 	EXP 	image: autoDraw = False
+13.8502 	EXP 	noise: autoDraw = False
+13.8502 	EXP 	image: image = 'stims/011.i.jpg'
+13.8502 	EXP 	image: autoDraw = True
+14.5320 	EXP 	image: autoDraw = False
+14.5487 	EXP 	noise: autoDraw = True
+15.0148 	EXP 	New trial (rep=0, index=3): OrderedDict([('stimFile', 'stims/003.i.jpg'), ('Valence', 'Practice')])
+15.0305 	EXP 	image: autoDraw = False
+15.0305 	EXP 	noise: autoDraw = False
+15.0305 	EXP 	image: image = 'stims/003.i.jpg'
+15.0305 	EXP 	image: autoDraw = True
+15.7292 	EXP 	image: autoDraw = False
+15.7458 	EXP 	noise: autoDraw = True
+16.2120 	EXP 	New trial (rep=0, index=4): OrderedDict([('stimFile', 'stims/017.i.jpg'), ('Valence', 'Practice')])
+16.2276 	EXP 	image: autoDraw = False
+16.2276 	EXP 	noise: autoDraw = False
+16.2276 	EXP 	image: image = 'stims/017.i.jpg'
+16.2276 	EXP 	image: autoDraw = True
+16.9263 	EXP 	image: autoDraw = False
+16.9432 	EXP 	noise: autoDraw = True
+17.4097 	EXP 	New trial (rep=0, index=5): OrderedDict([('stimFile', 'stims/015.i.jpg'), ('Valence', 'Practice')])
+17.4418 	EXP 	noise: autoDraw = False
+17.4418 	EXP 	image: autoDraw = False
+17.4418 	EXP 	noise: autoDraw = False
+17.4418 	EXP 	image: image = 'stims/015.i.jpg'
+17.4418 	EXP 	image: autoDraw = True
+18.1236 	EXP 	image: autoDraw = False
+18.1402 	EXP 	noise: autoDraw = True
+18.6071 	EXP 	New trial (rep=0, index=6): OrderedDict([('stimFile', 'stims/014.i.jpg'), ('Valence', 'Practice')])
+18.6389 	EXP 	noise: autoDraw = False
+18.6389 	EXP 	image: autoDraw = False
+18.6389 	EXP 	noise: autoDraw = False
+18.6389 	EXP 	image: image = 'stims/014.i.jpg'
+18.6389 	EXP 	image: autoDraw = True
+19.3203 	EXP 	image: autoDraw = False
+19.3372 	EXP 	noise: autoDraw = True
+19.8040 	EXP 	New trial (rep=0, index=7): OrderedDict([('stimFile', 'stims/020.i.jpg'), ('Valence', 'Practice')])
+19.8195 	EXP 	noise: autoDraw = False
+19.8195 	EXP 	image: autoDraw = False
+19.8195 	EXP 	noise: autoDraw = False
+19.8195 	EXP 	image: image = 'stims/020.i.jpg'
+19.8195 	EXP 	image: autoDraw = True
+20.5178 	EXP 	image: autoDraw = False
+20.5347 	EXP 	noise: autoDraw = True
+21.0013 	EXP 	New trial (rep=0, index=8): OrderedDict([('stimFile', 'stims/016.i.jpg'), ('Valence', 'Practice')])
+21.0164 	EXP 	noise: autoDraw = False
+21.0164 	EXP 	image: autoDraw = False
+21.0164 	EXP 	noise: autoDraw = False
+21.0164 	EXP 	image: image = 'stims/016.i.jpg'
+21.0164 	EXP 	image: autoDraw = True
+21.7151 	EXP 	image: autoDraw = False
+21.7320 	EXP 	noise: autoDraw = True
+21.8522 	DATA 	Keypress: escape
+22.1316 	EXP 	window1: mouseVisible = True

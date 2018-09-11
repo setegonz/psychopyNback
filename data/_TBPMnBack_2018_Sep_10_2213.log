@@ -1,0 +1,149 @@
+9.3835 	WARNING 	User requested fullscreen with size [1440  900], but screen is actually [1280, 800]. Using actual size
+10.1707 	EXP 	Created window1 = Window(allowGUI=False, allowStencil=False, args=UNKNOWN, autoLog=True, bitsMode=UNKNOWN, blendMode='avg', color=array([0., 0., 0.]), colorSpace='rgb', fullscr=<method-wrapper '__getattribute__' of attributeSetter object at 0x124480d68>, gamma=None, kwargs=UNKNOWN, lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x12794abe0>, multiSample=False, name='window1', numSamples=2, pos=[0.0, 0.0], screen=0, size=array([1280,  800]), stereo=False, units='norm', useFBO=True, useRetina=False, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+10.1708 	EXP 	window1: recordFrameIntervals = False
+10.3342 	EXP 	window1: recordFrameIntervals = True
+10.5184 	EXP 	window1: recordFrameIntervals = False
+10.6567 	EXP 	Created textWS = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='textWS', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255., 255.]), text='default text', units='norm', win=Window(...), wrapWidth=1)
+10.7585 	EXP 	Created textPractice = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='textPractice', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255., 255.]), text=str(...), units='norm', win=Window(...), wrapWidth=1)
+10.7744 	EXP 	Created imageprobando = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='imageprobando', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([0.5, 0.5]), texRes=128, units='norm', win=Window(...))
+10.7856 	EXP 	Created noisePractice = NoiseStim(__class__=<class 'psychopy.visual.noise.NoiseStim'>, autoDraw=False, autoLog=True, blendmode='avg', color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-2.0, interpolate=False, mask='none', maskParams=None, name='noisePractice', opacity=1.0, ori=0.0, phase=array([0., 0.]), pos=array([0., 0.]), rgbPedestal=array([0., 0., 0.]), sf=array([1., 1.]), size=array([0.5, 0.5]), tex='sin', texRes=128, units='norm', win=Window(...))
+10.8619 	EXP 	Created textExperiment = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='textExperiment', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255., 255.]), text=str(...), units='norm', win=Window(...), wrapWidth=1)
+10.8714 	EXP 	Created textTask = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='textTask', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255., 255.]), text='Bloque nuevo', units='norm', win=Window(...), wrapWidth=1)
+10.8744 	EXP 	Created image_2 = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='image_2', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([0.5, 0.5]), texRes=128, units='norm', win=Window(...))
+10.8773 	EXP 	Created noise = NoiseStim(__class__=<class 'psychopy.visual.noise.NoiseStim'>, autoDraw=False, autoLog=True, blendmode='avg', color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, interpolate=False, mask='none', maskParams=None, name='noise', opacity=1.0, ori=0.0, phase=array([0., 0.]), pos=array([0., 0.]), rgbPedestal=array([0., 0., 0.]), sf=array([1., 1.]), size=array([0.5, 0.5]), tex='sin', texRes=128, units='norm', win=Window(...))
+10.8916 	EXP 	Created textThanks = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='textThanks', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255., 255.]), text='Obrigado', units='norm', win=Window(...), wrapWidth=1)
+10.9332 	EXP 	noisePractice: blendmode = 'avg'
+10.9332 	EXP 	noisePractice: mask = None
+10.9332 	EXP 	noisePractice: texRes = 128
+10.9332 	EXP 	noisePractice: noiseType = 'Binary'
+10.9332 	EXP 	noisePractice: noiseImage = None
+10.9332 	EXP 	noisePractice: noiseElementSize = 0.0625
+10.9332 	EXP 	noisePractice: noiseBaseSf = 8.0
+10.9332 	EXP 	noisePractice: noiseBW = 1.0
+10.9332 	EXP 	noisePractice: noiseBWO = 1.0
+10.9332 	EXP 	noisePractice: noiseFractalPower = 0.0
+10.9332 	EXP 	noisePractice: noiseFilterUpper = 8.0
+10.9332 	EXP 	noisePractice: noiseFilterLower = 1.0
+10.9332 	EXP 	noisePractice: noiseFilterOrder = 0.0
+10.9332 	EXP 	noisePractice: noiseClip = 3.0
+10.9332 	EXP 	noisePractice: tex = array([[-1., -1.,  1.,  1.,  1., -1.,  1.,  1.],
+       [ 1., -1., -1., -1., -1.,  1., -1., -1.],
+       [ 1.,  1.,  1., -1., -1., -1., -1.,  1.],
+       [ 1.,  1.,  1., -1., -1., -1., -1.,  1.],
+       [-1., -1., -1.,  1., -1., -1.,  1.,  1.],
+       [-1., -1., -1.,  1.,  1.,  1.,  1.,  1.],
+       [-1., -1., -1.,  1., -1.,  1., -1.,  1.],
+       [ 1.,  1.,  1.,  1.,  1., -1., -1.,  1.]])
+10.9332 	EXP 	noisePractice: tex = array([[ 1.,  1.,  1.,  1., -1.,  1., -1.,  1.],
+       [ 1., -1.,  1., -1., -1.,  1.,  1., -1.],
+       [ 1., -1., -1., -1., -1., -1.,  1.,  1.],
+       [-1., -1.,  1., -1., -1., -1.,  1., -1.],
+       [-1.,  1.,  1., -1., -1., -1., -1.,  1.],
+       [-1.,  1.,  1., -1.,  1.,  1.,  1., -1.],
+       [ 1.,  1., -1., -1.,  1.,  1.,  1.,  1.],
+       [-1., -1.,  1., -1.,  1.,  1., -1., -1.]])
+10.9332 	EXP 	noise: blendmode = 'avg'
+10.9332 	EXP 	noise: mask = None
+10.9332 	EXP 	noise: texRes = 128
+10.9332 	EXP 	noise: noiseType = 'Binary'
+10.9332 	EXP 	noise: noiseImage = None
+10.9332 	EXP 	noise: noiseElementSize = 0.0625
+10.9332 	EXP 	noise: noiseBaseSf = 8.0
+10.9332 	EXP 	noise: noiseBW = 1.0
+10.9332 	EXP 	noise: noiseBWO = 1.0
+10.9332 	EXP 	noise: noiseFractalPower = 0.0
+10.9332 	EXP 	noise: noiseFilterUpper = 8.0
+10.9332 	EXP 	noise: noiseFilterLower = 1.0
+10.9332 	EXP 	noise: noiseFilterOrder = 0.0
+10.9332 	EXP 	noise: noiseClip = 3.0
+10.9332 	EXP 	noise: tex = array([[ 1., -1.,  1.,  1., -1.,  1.,  1., -1.],
+       [ 1., -1.,  1.,  1.,  1., -1., -1.,  1.],
+       [ 1., -1.,  1., -1.,  1., -1.,  1., -1.],
+       [-1.,  1., -1.,  1.,  1.,  1., -1., -1.],
+       [-1.,  1.,  1., -1., -1., -1.,  1., -1.],
+       [-1.,  1., -1., -1., -1.,  1.,  1., -1.],
+       [-1., -1.,  1.,  1.,  1., -1.,  1.,  1.],
+       [-1., -1., -1.,  1.,  1.,  1., -1., -1.]])
+10.9332 	EXP 	noise: tex = array([[-1., -1., -1.,  1., -1.,  1., -1.,  1.],
+       [ 1., -1., -1.,  1., -1.,  1.,  1., -1.],
+       [-1., -1.,  1.,  1.,  1., -1., -1., -1.],
+       [ 1.,  1.,  1., -1.,  1., -1., -1.,  1.],
+       [-1., -1., -1.,  1.,  1., -1., -1., -1.],
+       [ 1.,  1.,  1., -1.,  1., -1., -1.,  1.],
+       [ 1.,  1., -1.,  1., -1., -1.,  1.,  1.],
+       [ 1., -1., -1.,  1., -1.,  1.,  1.,  1.]])
+10.9332 	EXP 	textWS: text = 'Bem vindo. \nLeia as instrucoes no papel.'
+10.9332 	EXP 	textWS: autoDraw = True
+12.5009 	DATA 	Keypress: t
+12.5348 	EXP 	Imported chooseBlock.csv as conditions, 1 conditions, 2 params
+12.5360 	EXP 	Created sequence: random, trialTypes=1, nReps=1, seed=None
+12.5367 	EXP 	New trial (rep=0, index=0): OrderedDict([('condsFile', 'practiceBlock.csv'), ('readyMsg', 'Pronto')])
+12.5456 	EXP 	textWS: autoDraw = False
+12.5456 	EXP 	textPractice: autoDraw = True
+13.4635 	DATA 	Keypress: t
+13.4694 	EXP 	Imported practiceBlock.csv as conditions, 22 conditions, 2 params
+13.4703 	EXP 	Created sequence: random, trialTypes=22, nReps=1, seed=None
+13.4710 	EXP 	New trial (rep=0, index=0): OrderedDict([('stimFile', 'stims/016.i.jpg'), ('Valence', 'Practice')])
+13.5772 	EXP 	textPractice: autoDraw = False
+13.5772 	EXP 	imageprobando: image = 'stims/016.i.jpg'
+13.5772 	EXP 	imageprobando: autoDraw = True
+14.1764 	EXP 	imageprobando: autoDraw = False
+14.1926 	EXP 	noisePractice: autoDraw = True
+16.1723 	EXP 	New trial (rep=0, index=1): OrderedDict([('stimFile', 'stims/005.i.jpg'), ('Valence', 'Practice')])
+16.1876 	EXP 	noisePractice: autoDraw = False
+16.1876 	EXP 	imageprobando: autoDraw = False
+16.1876 	EXP 	noisePractice: autoDraw = False
+16.1876 	EXP 	imageprobando: image = 'stims/005.i.jpg'
+16.1876 	EXP 	imageprobando: autoDraw = True
+16.8865 	EXP 	imageprobando: autoDraw = False
+16.9031 	EXP 	noisePractice: autoDraw = True
+20.8615 	EXP 	New trial (rep=0, index=2): OrderedDict([('stimFile', 'stims/019.i.jpg'), ('Valence', 'Practice')])
+20.8766 	EXP 	noisePractice: autoDraw = False
+20.8766 	EXP 	imageprobando: autoDraw = False
+20.8766 	EXP 	noisePractice: autoDraw = False
+20.8766 	EXP 	imageprobando: image = 'stims/019.i.jpg'
+20.8766 	EXP 	imageprobando: autoDraw = True
+21.5748 	EXP 	imageprobando: autoDraw = False
+21.5911 	EXP 	noisePractice: autoDraw = True
+25.5506 	EXP 	New trial (rep=0, index=3): OrderedDict([('stimFile', 'stims/022.i.jpg'), ('Valence', 'Practice')])
+25.5651 	EXP 	noisePractice: autoDraw = False
+25.5651 	EXP 	imageprobando: autoDraw = False
+25.5651 	EXP 	noisePractice: autoDraw = False
+25.5651 	EXP 	imageprobando: image = 'stims/022.i.jpg'
+25.5651 	EXP 	imageprobando: autoDraw = True
+26.2646 	EXP 	imageprobando: autoDraw = False
+26.2808 	EXP 	noisePractice: autoDraw = True
+27.2458 	EXP 	New trial (rep=0, index=4): OrderedDict([('stimFile', 'stims/015.i.jpg'), ('Valence', 'Practice')])
+27.2614 	EXP 	noisePractice: autoDraw = False
+27.2614 	EXP 	imageprobando: autoDraw = False
+27.2614 	EXP 	noisePractice: autoDraw = False
+27.2614 	EXP 	imageprobando: image = 'stims/015.i.jpg'
+27.2614 	EXP 	imageprobando: autoDraw = True
+27.9598 	EXP 	imageprobando: autoDraw = False
+27.9764 	EXP 	noisePractice: autoDraw = True
+28.9418 	EXP 	New trial (rep=0, index=5): OrderedDict([('stimFile', 'stims/018.i.jpg'), ('Valence', 'Practice')])
+28.9572 	EXP 	noisePractice: autoDraw = False
+28.9572 	EXP 	imageprobando: autoDraw = False
+28.9572 	EXP 	noisePractice: autoDraw = False
+28.9572 	EXP 	imageprobando: image = 'stims/018.i.jpg'
+28.9572 	EXP 	imageprobando: autoDraw = True
+29.6567 	EXP 	imageprobando: autoDraw = False
+29.6731 	EXP 	noisePractice: autoDraw = True
+30.6375 	EXP 	New trial (rep=0, index=6): OrderedDict([('stimFile', 'stims/009.i.jpg'), ('Valence', 'Practice')])
+30.6539 	EXP 	noisePractice: autoDraw = False
+30.6539 	EXP 	imageprobando: autoDraw = False
+30.6539 	EXP 	noisePractice: autoDraw = False
+30.6539 	EXP 	imageprobando: image = 'stims/009.i.jpg'
+30.6539 	EXP 	imageprobando: autoDraw = True
+31.3524 	EXP 	imageprobando: autoDraw = False
+31.3692 	EXP 	noisePractice: autoDraw = True
+35.3274 	EXP 	New trial (rep=0, index=7): OrderedDict([('stimFile', 'stims/002.i.jpg'), ('Valence', 'Practice')])
+35.3424 	EXP 	noisePractice: autoDraw = False
+35.3424 	EXP 	imageprobando: autoDraw = False
+35.3424 	EXP 	noisePractice: autoDraw = False
+35.3424 	EXP 	imageprobando: image = 'stims/002.i.jpg'
+35.3424 	EXP 	imageprobando: autoDraw = True
+36.0412 	EXP 	imageprobando: autoDraw = False
+36.0579 	EXP 	noisePractice: autoDraw = True
+39.7378 	DATA 	Keypress: escape
+40.0172 	EXP 	window1: mouseVisible = True

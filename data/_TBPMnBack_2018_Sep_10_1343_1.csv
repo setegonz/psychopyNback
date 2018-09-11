@@ -1,0 +1,8 @@
+stimFile,Valence,practiceLoop.thisRepN,practiceLoop.thisTrialN,practiceLoop.thisN,practiceLoop.thisIndex,key_resp_2.keys,key_resp_2.rt,key_resp_3.keys,key_resp_3.rt,respPractice.keys,respPractice.rt,session,participant,date,expName,frameRate,
+,,,,,,t,1.0779825480003637,,,,,001,,2018_Sep_10_1343,TBPMnBack,60.44521405959083,
+,,,,,,,,t,0.8014955059989006,,,001,,2018_Sep_10_1343,TBPMnBack,60.44521405959083,
+stims/004.i.jpg,Practice,0,0,0,3,,,,,y,0.7683464849997108,001,,2018_Sep_10_1343,TBPMnBack,60.44521405959083,
+stims/006.i.jpg,Practice,0,1,1,5,,,,,n,0.5677594810003939,001,,2018_Sep_10_1343,TBPMnBack,60.44521405959083,
+stims/005.i.jpg,Practice,0,2,2,4,,,,,y,0.31873304699911387,001,,2018_Sep_10_1343,TBPMnBack,60.44521405959083,
+stims/018.i.jpg,Practice,0,3,3,17,,,,,n,0.2681705079994572,001,,2018_Sep_10_1343,TBPMnBack,60.44521405959083,
+stims/016.i.jpg,Practice,0,4,4,15,,,,,y,0.18681467299938959,001,,2018_Sep_10_1343,TBPMnBack,60.44521405959083,
