@@ -472,7 +472,7 @@
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
         <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
-        <Param name="size" updates="constant" val="(0.5, 0.5)" valType="code"/>
+        <Param name="size" updates="constant" val="(1.5, 1.5)" valType="code"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
@@ -508,7 +508,7 @@
         <Param name="phase" updates="constant" val="0.0" valType="code"/>
         <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
         <Param name="sf" updates="constant" val="None" valType="code"/>
-        <Param name="size" updates="constant" val="(0.5, 0.5)" valType="code"/>
+        <Param name="size" updates="constant" val="(1.5, 1.5)" valType="code"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.7" valType="code"/>
@@ -519,6 +519,20 @@
       </NoiseStimComponent>
     </Routine>
     <Routine name="WelcomeScreen">
+      <CodeComponent name="StimuliRandomization">
+        <Param name="Begin Experiment" updates="constant" val="import pandas as pd  &amp;#10;files = ['pos.xlsx', 'neg.xlsx', 'neutral.xlsx']&amp;#10; # 9 images per condition &amp;#10;# 3 repeats per condition  &amp;#10;# First, select repeating stim at random and indicate they repeat with a 1 &amp;#10;newStimList = pd.DataFrame() &amp;#10;for f in files:&amp;#10;     temp = pd.read_excel(f)&amp;#10;     randomLocs = np.random.choice(range(temp.shape[0]), size=3, replace=False)&amp;#10;     temp['repeat'].iloc[randomLocs] = 1&amp;#10;     newStimList = newStimList.append(temp)  # Append all stim to a new dataframe, so all in one place  &amp;#10;# Shuffle new dataframe &amp;#10;newStimList = newStimList.sample(frac=1).reset_index(drop=True) &amp;#10;# Add new index to keep track of order &amp;#10;newStimList = newStimList.reset_index() &amp;#10;# Duplicate repeating rows &amp;#10;repeats = newStimList[newStimList['repeat']==1] &amp;#10;newStimList = pd.concat([repeats, newStimList], ignore_index=True).sort_values('index') &amp;#10;# Save new stim list to csv ready for trial handler &amp;#10;newStimList.to_csv('newStimList.csv', index=False)" valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Code Type" updates="None" val="Py" valType="str"/>
+        <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="name" updates="None" val="StimuliRandomization" valType="code"/>
+      </CodeComponent>
       <TextComponent name="textWS">
         <Param name="color" updates="constant" val="white" valType="str"/>
         <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
@@ -558,112 +572,104 @@
       </KeyboardComponent>
     </Routine>
     <Routine name="PracticeRoutine">
-      <CodeComponent name="code">
-        <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Begin JS Routine" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Begin Routine" updates="constant" val="x = randint(low = 1, high = 5)" valType="extendedCode"/>
-        <Param name="Code Type" updates="None" val="Py" valType="str"/>
-        <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
-        <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="End JS Routine" updates="constant" val="" valType="extendedCode"/>
-        <Param name="End Routine" updates="constant" val="" valType="extendedCode"/>
-        <Param name="name" updates="None" val="code" valType="code"/>
-      </CodeComponent>
       <ImageComponent name="imageprobando">
         <Param name="color" updates="constant" val="$[1,1,1]" valType="str"/>
         <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
         <Param name="durationEstim" updates="None" val="" valType="code"/>
         <Param name="flipHoriz" updates="constant" val="False" valType="bool"/>
         <Param name="flipVert" updates="constant" val="False" valType="bool"/>
-        <Param name="image" updates="set every repeat" val="$stimFile" valType="str"/>
+        <Param name="image" updates="set every repeat" val="$stim" valType="str"/>
         <Param name="interpolate" updates="constant" val="linear" valType="str"/>
         <Param name="mask" updates="constant" val="None" valType="str"/>
         <Param name="name" updates="None" val="imageprobando" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
         <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
-        <Param name="size" updates="constant" val="(0.5, 0.5)" valType="code"/>
+        <Param name="size" updates="constant" val="(1.5, 1.5)" valType="code"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
-        <Param name="stopVal" updates="constant" val="0.7" valType="code"/>
+        <Param name="stopVal" updates="constant" val="1" valType="code"/>
         <Param name="texture resolution" updates="constant" val="128" valType="code"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
       </ImageComponent>
-      <NoiseStimComponent name="noisePractice">
-        <Param name="blendmode" updates="constant" val="avg" valType="str"/>
-        <Param name="color" updates="constant" val="$[1,1,1]" valType="str"/>
-        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
-        <Param name="contrast" updates="constant" val="1.0" valType="code"/>
+      <KeyboardComponent name="respPrac">
+        <Param name="allowedKeys" updates="constant" val="'space'" valType="code"/>
+        <Param name="correctAns" updates="constant" val="" valType="str"/>
+        <Param name="discard previous" updates="constant" val="True" valType="bool"/>
         <Param name="durationEstim" updates="None" val="" valType="code"/>
-        <Param name="interpolate" updates="constant" val="nearest" valType="str"/>
-        <Param name="mask" updates="constant" val="None" valType="str"/>
-        <Param name="name" updates="None" val="noisePractice" valType="code"/>
-        <Param name="noiseBW" updates="constant" val="1" valType="code"/>
-        <Param name="noiseBWO" updates="constant" val="1" valType="code"/>
-        <Param name="noiseBaseSf" updates="constant" val="8.0" valType="code"/>
-        <Param name="noiseClip" updates="constant" val="3.0" valType="code"/>
-        <Param name="noiseElementSize" updates="constant" val="0.0625" valType="code"/>
-        <Param name="noiseFilterLower" updates="constant" val="1.0" valType="code"/>
-        <Param name="noiseFilterOrder" updates="constant" val="0.0" valType="code"/>
-        <Param name="noiseFilterUpper" updates="constant" val="8.0" valType="code"/>
-        <Param name="noiseFractalPower" updates="constant" val="0.0" valType="code"/>
-        <Param name="noiseImage" updates="constant" val="None" valType="str"/>
-        <Param name="noiseNewSample" updates="constant" val="None" valType="str"/>
-        <Param name="noiseNewSampleWhen" updates="constant" val="1" valType="str"/>
-        <Param name="noiseType" updates="constant" val="Binary" valType="str"/>
-        <Param name="opacity" updates="constant" val="1" valType="code"/>
-        <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="phase" updates="constant" val="0.0" valType="code"/>
-        <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
-        <Param name="sf" updates="constant" val="None" valType="code"/>
-        <Param name="size" updates="constant" val="(0.5, 0.5)" valType="code"/>
+        <Param name="forceEndRoutine" updates="constant" val="True" valType="bool"/>
+        <Param name="name" updates="None" val="respPrac" valType="code"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
-        <Param name="startVal" updates="None" val="0.7" valType="code"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
-        <Param name="stopVal" updates="constant" val="x" valType="code"/>
-        <Param name="texture resolution" updates="constant" val="128" valType="code"/>
+        <Param name="stopVal" updates="constant" val="1.2" valType="code"/>
+        <Param name="store" updates="constant" val="last key" valType="str"/>
+        <Param name="storeCorrect" updates="constant" val="True" valType="bool"/>
+        <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
+      </KeyboardComponent>
+    </Routine>
+    <Routine name="feedback">
+      <CodeComponent name="code">
+        <Param name="Begin Experiment" updates="constant" val="# Begin Experiment &amp;#10;msg = ''" valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="# Begin Routine &amp;#10;if trialsPractice.thisN == 0:&amp;#10;     one_back = 'Not applicable'" valType="extendedCode"/>
+        <Param name="Code Type" updates="None" val="Py" valType="str"/>
+        <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="# End Routine&amp;#10;if stim == one_back and respPrac.keys == 'space':&amp;#10;     msg= &quot;Correct! RT=%.3f&quot; %(respPrac.rt)&amp;#10;elif stim != one_back and not respPrac.keys:&amp;#10;      msg= &quot;Correct!&quot; &amp;#10;elif stim != one_back and respPrac.keys == 'space':&amp;#10;     msg=&quot;Incorrect&quot; &amp;#10;elif stim == one_back and not respPrac.keys:&amp;#10;     msg=&quot;You miss that one&quot; &amp;#10;one_back = stim" valType="extendedCode"/>
+        <Param name="name" updates="None" val="code" valType="code"/>
+      </CodeComponent>
+      <TextComponent name="text">
+        <Param name="color" updates="constant" val="white" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.1" valType="code"/>
+        <Param name="name" updates="None" val="text" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="1.0" valType="code"/>
+        <Param name="text" updates="set every repeat" val="$msg" valType="str"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
-      </NoiseStimComponent>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+      </TextComponent>
     </Routine>
   </Routines>
   <Flow>
     <Routine name="WelcomeScreen"/>
-    <LoopInitiator loopType="TrialHandler" name="trials">
-      <Param name="Selected rows" updates="None" val="3" valType="str"/>
-      <Param name="conditions" updates="None" val="[OrderedDict([('condsFile', 'negativeBlock.csv'), ('readyMsg', 'Pronto')]), OrderedDict([('condsFile', 'NeutralBlock.csv'), ('readyMsg', 'Pronto')]), OrderedDict([('condsFile', 'positiveBlock.csv'), ('readyMsg', 'Pronto')]), OrderedDict([('condsFile', 'practiceBlock.csv'), ('readyMsg', 'Pronto')])]" valType="str"/>
-      <Param name="conditionsFile" updates="None" val="chooseBlock.csv" valType="str"/>
-      <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
-      <Param name="isTrials" updates="None" val="True" valType="bool"/>
-      <Param name="loopType" updates="None" val="random" valType="str"/>
-      <Param name="nReps" updates="None" val="1" valType="code"/>
-      <Param name="name" updates="None" val="trials" valType="code"/>
-      <Param name="random seed" updates="None" val="" valType="code"/>
-    </LoopInitiator>
     <Routine name="InstructionsPractice"/>
     <LoopInitiator loopType="TrialHandler" name="trialsPractice">
       <Param name="Selected rows" updates="None" val="" valType="str"/>
-      <Param name="conditions" updates="None" val="None" valType="str"/>
-      <Param name="conditionsFile" updates="None" val="$condsFile" valType="str"/>
+      <Param name="conditions" updates="None" val="[OrderedDict([('index', 0), ('stim', 'stims/4001.jpg'), ('repeat', None)]), OrderedDict([('index', 1), ('stim', 'stims/7820.jpg'), ('repeat', None)]), OrderedDict([('index', 2), ('stim', 'stims/7230.jpg'), ('repeat', None)]), OrderedDict([('index', 3), ('stim', 'stims/7496.jpg'), ('repeat', None)]), OrderedDict([('index', 4), ('stim', 'stims/7460.jpg'), ('repeat', None)]), OrderedDict([('index', 5), ('stim', 'stims/7330.jpg'), ('repeat', 1.0)]), OrderedDict([('index', 5), ('stim', 'stims/7330.jpg'), ('repeat', 1.0)]), OrderedDict([('index', 6), ('stim', 'stims/4653.jpg'), ('repeat', None)]), OrderedDict([('index', 7), ('stim', 'stims/7180.jpg'), ('repeat', None)]), OrderedDict([('index', 8), ('stim', 'stims/2312.jpg'), ('repeat', None)]), OrderedDict([('index', 9), ('stim', 'stims/4003.jpg'), ('repeat', None)]), OrderedDict([('index', 10), ('stim', 'stims/4000.jpg'), ('repeat', 1.0)]), OrderedDict([('index', 10), ('stim', 'stims/4000.jpg'), ('repeat', 1.0)]), OrderedDict([('index', 11), ('stim', 'stims/5622.jpg'), ('repeat', None)]), OrderedDict([('index', 12), ('stim', 'stims/9045.jpg'), ('repeat', None)]), OrderedDict([('index', 13), ('stim', 'stims/9045.jpg'), ('repeat', None)]), OrderedDict([('index', 14), ('stim', 'stims/7237.jpg'), ('repeat', None)]), OrderedDict([('index', 15), ('stim', 'stims/8116.jpg'), ('repeat', None)]), OrderedDict([('index', 16), ('stim', 'stims/5628.jpg'), ('repeat', None)]), OrderedDict([('index', 17), ('stim', 'stims/2850.jpg'), ('repeat', None)]), OrderedDict([('index', 18), ('stim', 'stims/4525.jpg'), ('repeat', 1.0)]), OrderedDict([('index', 18), ('stim', 'stims/4525.jpg'), ('repeat', 1.0)]), OrderedDict([('index', 19), ('stim', 'stims/7830.jpg'), ('repeat', None)]), OrderedDict([('index', 20), ('stim', 'stims/4180.jpg'), ('repeat', None)]), OrderedDict([('index', 21), ('stim', 'stims/4490.jpg'), ('repeat', None)]), OrderedDict([('index', 22), ('stim', 'stims/7830.jpg'), ('repeat', None)]), OrderedDict([('index', 23), ('stim', 'stims/4003.jpg'), ('repeat', None)]), OrderedDict([('index', 24), ('stim', 'stims/6314.jpg'), ('repeat', 1.0)]), OrderedDict([('index', 24), ('stim', 'stims/6314.jpg'), ('repeat', 1.0)]), OrderedDict([('index', 25), ('stim', 'stims/4180.jpg'), ('repeat', None)]), OrderedDict([('index', 26), ('stim', 'stims/8050.jpg'), ('repeat', None)]), OrderedDict([('index', 27), ('stim', 'stims/4640.jpg'), ('repeat', None)]), OrderedDict([('index', 28), ('stim', 'stims/7350.jpg'), ('repeat', None)]), OrderedDict([('index', 29), ('stim', 'stims/5535.jpg'), ('repeat', 1.0)]), OrderedDict([('index', 29), ('stim', 'stims/5535.jpg'), ('repeat', 1.0)]), OrderedDict([('index', 30), ('stim', 'stims/4530.jpg'), ('repeat', None)]), OrderedDict([('index', 31), ('stim', 'stims/4531.jpg'), ('repeat', None)]), OrderedDict([('index', 32), ('stim', 'stims/4525.jpg'), ('repeat', None)]), OrderedDict([('index', 33), ('stim', 'stims/5270.jpg'), ('repeat', 1.0)]), OrderedDict([('index', 33), ('stim', 'stims/5270.jpg'), ('repeat', 1.0)]), OrderedDict([('index', 34), ('stim', 'stims/7402.jpg'), ('repeat', None)]), OrderedDict([('index', 35), ('stim', 'stims/7340.jpg'), ('repeat', None)]), OrderedDict([('index', 36), ('stim', 'stims/1720.jpg'), ('repeat', None)]), OrderedDict([('index', 37), ('stim', 'stims/4656.jpg'), ('repeat', None)]), OrderedDict([('index', 38), ('stim', 'stims/7820.jpg'), ('repeat', None)]), OrderedDict([('index', 39), ('stim', 'stims/8050.jpg'), ('repeat', None)]), OrderedDict([('index', 40), ('stim', 'stims/2240.jpg'), ('repeat', None)]), OrderedDict([('index', 41), ('stim', 'stims/7450.jpg'), ('repeat', None)]), OrderedDict([('index', 42), ('stim', 'stims/7496.jpg'), ('repeat', None)]), OrderedDict([('index', 43), ('stim', 'stims/4534.jpg'), ('repeat', None)]), OrderedDict([('index', 44), ('stim', 'stims/4000.jpg'), ('repeat', None)]), OrderedDict([('index', 45), ('stim', 'stims/4490.jpg'), ('repeat', None)]), OrderedDict([('index', 46), ('stim', 'stims/4611.jpg'), ('repeat', None)]), OrderedDict([('index', 47), ('stim', 'stims/4520.jpg'), ('repeat', None)]), OrderedDict([('index', 48), ('stim', 'stims/8116.jpg'), ('repeat', None)]), OrderedDict([('index', 49), ('stim', 'stims/2850.jpg'), ('repeat', None)]), OrderedDict([('index', 50), ('stim', 'stims/4520.jpg'), ('repeat', None)]), OrderedDict([('index', 51), ('stim', 'stims/7351.jpg'), ('repeat', None)]), OrderedDict([('index', 52), ('stim', 'stims/7180.jpg'), ('repeat', 1.0)]), OrderedDict([('index', 52), ('stim', 'stims/7180.jpg'), ('repeat', 1.0)]), OrderedDict([('index', 53), ('stim', 'stims/2312.jpg'), ('repeat', None)]), OrderedDict([('index', 54), ('stim', 'stims/7130.jpg'), ('repeat', None)]), OrderedDict([('index', 55), ('stim', 'stims/4651.jpg'), ('repeat', None)]), OrderedDict([('index', 56), ('stim', 'stims/7190.jpg'), ('repeat', None)]), OrderedDict([('index', 57), ('stim', 'stims/4530.jpg'), ('repeat', None)]), OrderedDict([('index', 58), ('stim', 'stims/5535.jpg'), ('repeat', None)]), OrderedDict([('index', 59), ('stim', 'stims/7190.jpg'), ('repeat', None)]), OrderedDict([('index', 60), ('stim', 'stims/7430.jpg'), ('repeat', 1.0)]), OrderedDict([('index', 60), ('stim', 'stims/7430.jpg'), ('repeat', 1.0)]), OrderedDict([('index', 61), ('stim', 'stims/7237.jpg'), ('repeat', None)]), OrderedDict([('index', 62), ('stim', 'stims/4001.jpg'), ('repeat', None)]), OrderedDict([('index', 63), ('stim', 'stims/7130.jpg'), ('repeat', 1.0)]), OrderedDict([('index', 63), ('stim', 'stims/7130.jpg'), ('repeat', 1.0)]), OrderedDict([('index', 64), ('stim', 'stims/4608.jpg'), ('repeat', None)]), OrderedDict([('index', 65), ('stim', 'stims/6314.jpg'), ('repeat', None)])]" valType="str"/>
+      <Param name="conditionsFile" updates="None" val="newStimList.csv" valType="str"/>
       <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
       <Param name="isTrials" updates="None" val="True" valType="bool"/>
-      <Param name="loopType" updates="None" val="random" valType="str"/>
+      <Param name="loopType" updates="None" val="sequential" valType="str"/>
       <Param name="nReps" updates="None" val="1" valType="code"/>
       <Param name="name" updates="None" val="trialsPractice" valType="code"/>
       <Param name="random seed" updates="None" val="" valType="code"/>
     </LoopInitiator>
     <Routine name="PracticeRoutine"/>
+    <Routine name="feedback"/>
     <LoopTerminator name="trialsPractice"/>
-    <LoopTerminator name="trials"/>
     <Routine name="InstructionsExperiment"/>
     <LoopInitiator loopType="TrialHandler" name="conditionsLoop">
       <Param name="Selected rows" updates="None" val="0:2" valType="str"/>
-      <Param name="conditions" updates="None" val="[OrderedDict([('condsFile', 'negativeBlock.csv'), ('readyMsg', 'Pronto?')]), OrderedDict([('condsFile', 'NeutralBlock.csv'), ('readyMsg', 'Pronto?')]), OrderedDict([('condsFile', 'positiveBlock.csv'), ('readyMsg', 'Pronto?')]), OrderedDict([('condsFile', 'practiceBlock.csv'), ('readyMsg', 'Pronto?')])]" valType="str"/>
+      <Param name="conditions" updates="None" val="[OrderedDict([('condsFile', 'negativeBlock.csv'), ('readyMsg', 'Pronto')]), OrderedDict([('condsFile', 'NeutralBlock.csv'), ('readyMsg', 'Pronto')]), OrderedDict([('condsFile', 'positiveBlock.csv'), ('readyMsg', 'Pronto')]), OrderedDict([('condsFile', 'practiceBlock.csv'), ('readyMsg', 'Pronto')])]" valType="str"/>
       <Param name="conditionsFile" updates="None" val="chooseBlock.csv" valType="str"/>
       <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
       <Param name="isTrials" updates="None" val="True" valType="bool"/>

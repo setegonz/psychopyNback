@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v3.0.0b9),
-    on Mon Sep 10 22:13:07 2018
+    on Sat Sep 15 15:32:26 2018
 If you publish work using this script please cite the PsychoPy publications:
     Peirce, JW (2007) PsychoPy - Psychophysics software in Python.
         Journal of Neuroscience Methods, 162(1-2), 8-13.
@@ -66,13 +66,33 @@ else:
 
 # Initialize components for Routine "WelcomeScreen"
 WelcomeScreenClock = core.Clock()
+import pandas as pd  
+files = ['pos.xlsx', 'neg.xlsx', 'neutral.xlsx']
+ # 9 images per condition 
+# 3 repeats per condition  
+# First, select repeating stim at random and indicate they repeat with a 1 
+newStimList = pd.DataFrame() 
+for f in files:
+     temp = pd.read_excel(f)
+     randomLocs = np.random.choice(range(temp.shape[0]), size=3, replace=False)
+     temp['repeat'].iloc[randomLocs] = 1
+     newStimList = newStimList.append(temp)  # Append all stim to a new dataframe, so all in one place  
+# Shuffle new dataframe 
+newStimList = newStimList.sample(frac=1).reset_index(drop=True) 
+# Add new index to keep track of order 
+newStimList = newStimList.reset_index() 
+# Duplicate repeating rows 
+repeats = newStimList[newStimList['repeat']==1] 
+newStimList = pd.concat([repeats, newStimList], ignore_index=True).sort_values('index') 
+# Save new stim list to csv ready for trial handler 
+newStimList.to_csv('newStimList.csv', index=False)
 textWS = visual.TextStim(win=win, name='textWS',
     text='default text',
     font='Arial',
     pos=(0, 0), height=0.1, wrapWidth=None, ori=0, 
     color='white', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
-    depth=0.0);
+    depth=-1.0);
 
 # Initialize components for Routine "InstructionsPractice"
 InstructionsPracticeClock = core.Clock()
@@ -86,23 +106,25 @@ textPractice = visual.TextStim(win=win, name='textPractice',
 
 # Initialize components for Routine "PracticeRoutine"
 PracticeRoutineClock = core.Clock()
-
 imageprobando = visual.ImageStim(
     win=win, name='imageprobando',
     image='sin', mask=None,
-    ori=0, pos=(0, 0), size=(0.5, 0.5),
+    ori=0, pos=(0, 0), size=(1.5, 1.5),
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
-    texRes=128, interpolate=True, depth=-1.0)
-noisePractice = visual.NoiseStim(
-    win=win, name='noisePractice',
-    noiseImage=None, mask=None,
-    ori=0, pos=(0, 0), size=(0.5, 0.5), sf=None, phase=0.0,
-    color=[1,1,1], colorSpace='rgb', opacity=1, blendmode='avg', contrast=1.0,
-    texRes=128,
-    noiseType='Binary', noiseElementSize=0.0625, noiseBaseSf=8.0,
-    noiseBW=1, noiseBWO=1, noiseFractalPower=0.0,noiseFilterLower=1.0, noiseFilterUpper=8.0, noiseFilterOrder=0.0, noiseClip=3.0, interpolate=False, depth=-2.0)
-noisePractice.buildNoise()
+    texRes=128, interpolate=True, depth=0.0)
+
+# Initialize components for Routine "feedback"
+feedbackClock = core.Clock()
+# Begin Experiment 
+msg = ''
+text = visual.TextStim(win=win, name='text',
+    text='default text',
+    font='Arial',
+    pos=(0, 0), height=0.1, wrapWidth=None, ori=0, 
+    color='white', colorSpace='rgb', opacity=1, 
+    languageStyle='LTR',
+    depth=-1.0);
 
 # Initialize components for Routine "InstructionsExperiment"
 InstructionsExperimentClock = core.Clock()
@@ -126,21 +148,22 @@ textTask = visual.TextStim(win=win, name='textTask',
 
 # Initialize components for Routine "valencedTrial"
 valencedTrialClock = core.Clock()
+
 image_2 = visual.ImageStim(
     win=win, name='image_2',
     image='sin', mask=None,
-    ori=0, pos=(0, 0), size=(0.5, 0.5),
+    ori=0, pos=(0, 0), size=(1.5, 1.5),
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
-    texRes=128, interpolate=True, depth=0.0)
+    texRes=128, interpolate=True, depth=-1.0)
 noise = visual.NoiseStim(
     win=win, name='noise',
     noiseImage=None, mask=None,
-    ori=0, pos=(0, 0), size=(0.5, 0.5), sf=None, phase=0.0,
+    ori=0, pos=(0, 0), size=(1.5, 1.5), sf=None, phase=0.0,
     color=[1,1,1], colorSpace='rgb', opacity=1, blendmode='avg', contrast=1.0,
     texRes=128,
     noiseType='Binary', noiseElementSize=0.0625, noiseBaseSf=8.0,
-    noiseBW=1, noiseBWO=1, noiseFractalPower=0.0,noiseFilterLower=1.0, noiseFilterUpper=8.0, noiseFilterOrder=0.0, noiseClip=3.0, interpolate=False, depth=-1.0)
+    noiseBW=1, noiseBWO=1, noiseFractalPower=0.0,noiseFilterLower=1.0, noiseFilterUpper=8.0, noiseFilterOrder=0.0, noiseClip=3.0, interpolate=False, depth=-2.0)
 noise.buildNoise()
 
 # Initialize components for Routine "Thanks"
@@ -163,6 +186,7 @@ WelcomeScreenClock.reset()  # clock
 frameN = -1
 continueRoutine = True
 # update component parameters for each repeat
+
 textWS.setText('Bem vindo. \nLeia as instrucoes no papel.')
 respWS = event.BuilderKeyResponse()
 # keep track of which components have finished
@@ -177,6 +201,7 @@ while continueRoutine:
     t = WelcomeScreenClock.getTime()
     frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
     # update/draw components on each frame
+    
     
     # *textWS* updates
     if t >= 0.0 and textWS.status == NOT_STARTED:
@@ -227,6 +252,7 @@ while continueRoutine:
 for thisComponent in WelcomeScreenComponents:
     if hasattr(thisComponent, "setAutoDraw"):
         thisComponent.setAutoDraw(False)
+
 # check responses
 if respWS.keys in ['', [], None]:  # No response was made
     respWS.keys=None
@@ -237,70 +263,162 @@ thisExp.nextEntry()
 # the Routine "WelcomeScreen" was not non-slip safe, so reset the non-slip timer
 routineTimer.reset()
 
-# set up handler to look after randomisation of conditions etc
-trials = data.TrialHandler(nReps=1, method='random', 
-    extraInfo=expInfo, originPath=-1,
-    trialList=data.importConditions('chooseBlock.csv', selection='3'),
-    seed=None, name='trials')
-thisExp.addLoop(trials)  # add the loop to the experiment
-thisTrial = trials.trialList[0]  # so we can initialise stimuli with some values
-# abbreviate parameter names if possible (e.g. rgb = thisTrial.rgb)
-if thisTrial != None:
-    for paramName in thisTrial:
-        exec('{} = thisTrial[paramName]'.format(paramName))
+# ------Prepare to start Routine "InstructionsPractice"-------
+t = 0
+InstructionsPracticeClock.reset()  # clock
+frameN = -1
+continueRoutine = True
+# update component parameters for each repeat
+respPract = event.BuilderKeyResponse()
+# keep track of which components have finished
+InstructionsPracticeComponents = [textPractice, respPract]
+for thisComponent in InstructionsPracticeComponents:
+    if hasattr(thisComponent, 'status'):
+        thisComponent.status = NOT_STARTED
 
-for thisTrial in trials:
-    currentLoop = trials
-    # abbreviate parameter names if possible (e.g. rgb = thisTrial.rgb)
-    if thisTrial != None:
-        for paramName in thisTrial:
-            exec('{} = thisTrial[paramName]'.format(paramName))
+# -------Start Routine "InstructionsPractice"-------
+while continueRoutine:
+    # get current time
+    t = InstructionsPracticeClock.getTime()
+    frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
+    # update/draw components on each frame
     
-    # ------Prepare to start Routine "InstructionsPractice"-------
+    # *textPractice* updates
+    if t >= 0.0 and textPractice.status == NOT_STARTED:
+        # keep track of start time/frame for later
+        textPractice.tStart = t
+        textPractice.frameNStart = frameN  # exact frame index
+        textPractice.setAutoDraw(True)
+    
+    # *respPract* updates
+    if t >= 0.0 and respPract.status == NOT_STARTED:
+        # keep track of start time/frame for later
+        respPract.tStart = t
+        respPract.frameNStart = frameN  # exact frame index
+        respPract.status = STARTED
+        # keyboard checking is just starting
+        win.callOnFlip(respPract.clock.reset)  # t=0 on next screen flip
+        event.clearEvents(eventType='keyboard')
+    if respPract.status == STARTED:
+        theseKeys = event.getKeys(keyList=['t'])
+        
+        # check for quit:
+        if "escape" in theseKeys:
+            endExpNow = True
+        if len(theseKeys) > 0:  # at least one key was pressed
+            respPract.keys = theseKeys[-1]  # just the last key pressed
+            respPract.rt = respPract.clock.getTime()
+            # a response ends the routine
+            continueRoutine = False
+    
+    # check if all components have finished
+    if not continueRoutine:  # a component has requested a forced-end of Routine
+        break
+    continueRoutine = False  # will revert to True if at least one component still running
+    for thisComponent in InstructionsPracticeComponents:
+        if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
+            continueRoutine = True
+            break  # at least one component has not yet finished
+    
+    # check for quit (the Esc key)
+    if endExpNow or event.getKeys(keyList=["escape"]):
+        core.quit()
+    
+    # refresh the screen
+    if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+        win.flip()
+
+# -------Ending Routine "InstructionsPractice"-------
+for thisComponent in InstructionsPracticeComponents:
+    if hasattr(thisComponent, "setAutoDraw"):
+        thisComponent.setAutoDraw(False)
+# check responses
+if respPract.keys in ['', [], None]:  # No response was made
+    respPract.keys=None
+thisExp.addData('respPract.keys',respPract.keys)
+if respPract.keys != None:  # we had a response
+    thisExp.addData('respPract.rt', respPract.rt)
+thisExp.nextEntry()
+# the Routine "InstructionsPractice" was not non-slip safe, so reset the non-slip timer
+routineTimer.reset()
+
+# set up handler to look after randomisation of conditions etc
+trialsPractice = data.TrialHandler(nReps=1, method='sequential', 
+    extraInfo=expInfo, originPath=-1,
+    trialList=data.importConditions('newStimList.csv'),
+    seed=None, name='trialsPractice')
+thisExp.addLoop(trialsPractice)  # add the loop to the experiment
+thisTrialsPractice = trialsPractice.trialList[0]  # so we can initialise stimuli with some values
+# abbreviate parameter names if possible (e.g. rgb = thisTrialsPractice.rgb)
+if thisTrialsPractice != None:
+    for paramName in thisTrialsPractice:
+        exec('{} = thisTrialsPractice[paramName]'.format(paramName))
+
+for thisTrialsPractice in trialsPractice:
+    currentLoop = trialsPractice
+    # abbreviate parameter names if possible (e.g. rgb = thisTrialsPractice.rgb)
+    if thisTrialsPractice != None:
+        for paramName in thisTrialsPractice:
+            exec('{} = thisTrialsPractice[paramName]'.format(paramName))
+    
+    # ------Prepare to start Routine "PracticeRoutine"-------
     t = 0
-    InstructionsPracticeClock.reset()  # clock
+    PracticeRoutineClock.reset()  # clock
     frameN = -1
     continueRoutine = True
+    routineTimer.add(1.200000)
     # update component parameters for each repeat
-    respPract = event.BuilderKeyResponse()
+    imageprobando.setImage(stim)
+    respPrac = event.BuilderKeyResponse()
     # keep track of which components have finished
-    InstructionsPracticeComponents = [textPractice, respPract]
-    for thisComponent in InstructionsPracticeComponents:
+    PracticeRoutineComponents = [imageprobando, respPrac]
+    for thisComponent in PracticeRoutineComponents:
         if hasattr(thisComponent, 'status'):
             thisComponent.status = NOT_STARTED
     
-    # -------Start Routine "InstructionsPractice"-------
-    while continueRoutine:
+    # -------Start Routine "PracticeRoutine"-------
+    while continueRoutine and routineTimer.getTime() > 0:
         # get current time
-        t = InstructionsPracticeClock.getTime()
+        t = PracticeRoutineClock.getTime()
         frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
         # update/draw components on each frame
         
-        # *textPractice* updates
-        if t >= 0.0 and textPractice.status == NOT_STARTED:
+        # *imageprobando* updates
+        if t >= 0.0 and imageprobando.status == NOT_STARTED:
             # keep track of start time/frame for later
-            textPractice.tStart = t
-            textPractice.frameNStart = frameN  # exact frame index
-            textPractice.setAutoDraw(True)
+            imageprobando.tStart = t
+            imageprobando.frameNStart = frameN  # exact frame index
+            imageprobando.setAutoDraw(True)
+        frameRemains = 0.0 + 1- win.monitorFramePeriod * 0.75  # most of one frame period left
+        if imageprobando.status == STARTED and t >= frameRemains:
+            imageprobando.setAutoDraw(False)
         
-        # *respPract* updates
-        if t >= 0.0 and respPract.status == NOT_STARTED:
+        # *respPrac* updates
+        if t >= 0.0 and respPrac.status == NOT_STARTED:
             # keep track of start time/frame for later
-            respPract.tStart = t
-            respPract.frameNStart = frameN  # exact frame index
-            respPract.status = STARTED
+            respPrac.tStart = t
+            respPrac.frameNStart = frameN  # exact frame index
+            respPrac.status = STARTED
             # keyboard checking is just starting
-            win.callOnFlip(respPract.clock.reset)  # t=0 on next screen flip
+            win.callOnFlip(respPrac.clock.reset)  # t=0 on next screen flip
             event.clearEvents(eventType='keyboard')
-        if respPract.status == STARTED:
-            theseKeys = event.getKeys(keyList=['t'])
+        frameRemains = 0.0 + 1.2- win.monitorFramePeriod * 0.75  # most of one frame period left
+        if respPrac.status == STARTED and t >= frameRemains:
+            respPrac.status = STOPPED
+        if respPrac.status == STARTED:
+            theseKeys = event.getKeys(keyList=['space'])
             
             # check for quit:
             if "escape" in theseKeys:
                 endExpNow = True
             if len(theseKeys) > 0:  # at least one key was pressed
-                respPract.keys = theseKeys[-1]  # just the last key pressed
-                respPract.rt = respPract.clock.getTime()
+                respPrac.keys = theseKeys[-1]  # just the last key pressed
+                respPrac.rt = respPrac.clock.getTime()
+                # was this 'correct'?
+                if (respPrac.keys == str('')) or (respPrac.keys == ''):
+                    respPrac.corr = 1
+                else:
+                    respPrac.corr = 0
                 # a response ends the routine
                 continueRoutine = False
         
@@ -308,7 +426,7 @@ for thisTrial in trials:
         if not continueRoutine:  # a component has requested a forced-end of Routine
             break
         continueRoutine = False  # will revert to True if at least one component still running
-        for thisComponent in InstructionsPracticeComponents:
+        for thisComponent in PracticeRoutineComponents:
             if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
                 continueRoutine = True
                 break  # at least one component has not yet finished
@@ -321,114 +439,93 @@ for thisTrial in trials:
         if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
             win.flip()
     
-    # -------Ending Routine "InstructionsPractice"-------
-    for thisComponent in InstructionsPracticeComponents:
+    # -------Ending Routine "PracticeRoutine"-------
+    for thisComponent in PracticeRoutineComponents:
         if hasattr(thisComponent, "setAutoDraw"):
             thisComponent.setAutoDraw(False)
     # check responses
-    if respPract.keys in ['', [], None]:  # No response was made
-        respPract.keys=None
-    trials.addData('respPract.keys',respPract.keys)
-    if respPract.keys != None:  # we had a response
-        trials.addData('respPract.rt', respPract.rt)
-    # the Routine "InstructionsPractice" was not non-slip safe, so reset the non-slip timer
-    routineTimer.reset()
+    if respPrac.keys in ['', [], None]:  # No response was made
+        respPrac.keys=None
+        # was no response the correct answer?!
+        if str('').lower() == 'none':
+           respPrac.corr = 1;  # correct non-response
+        else:
+           respPrac.corr = 0;  # failed to respond (incorrectly)
+    # store data for trialsPractice (TrialHandler)
+    trialsPractice.addData('respPrac.keys',respPrac.keys)
+    trialsPractice.addData('respPrac.corr', respPrac.corr)
+    if respPrac.keys != None:  # we had a response
+        trialsPractice.addData('respPrac.rt', respPrac.rt)
     
-    # set up handler to look after randomisation of conditions etc
-    trialsPractice = data.TrialHandler(nReps=1, method='random', 
-        extraInfo=expInfo, originPath=-1,
-        trialList=data.importConditions(condsFile),
-        seed=None, name='trialsPractice')
-    thisExp.addLoop(trialsPractice)  # add the loop to the experiment
-    thisTrialsPractice = trialsPractice.trialList[0]  # so we can initialise stimuli with some values
-    # abbreviate parameter names if possible (e.g. rgb = thisTrialsPractice.rgb)
-    if thisTrialsPractice != None:
-        for paramName in thisTrialsPractice:
-            exec('{} = thisTrialsPractice[paramName]'.format(paramName))
+    # ------Prepare to start Routine "feedback"-------
+    t = 0
+    feedbackClock.reset()  # clock
+    frameN = -1
+    continueRoutine = True
+    routineTimer.add(1.000000)
+    # update component parameters for each repeat
+    # Begin Routine 
+    if trialsPractice.thisN == 0:
+         one_back = 'Not applicable'
+    text.setText(msg)
+    # keep track of which components have finished
+    feedbackComponents = [text]
+    for thisComponent in feedbackComponents:
+        if hasattr(thisComponent, 'status'):
+            thisComponent.status = NOT_STARTED
     
-    for thisTrialsPractice in trialsPractice:
-        currentLoop = trialsPractice
-        # abbreviate parameter names if possible (e.g. rgb = thisTrialsPractice.rgb)
-        if thisTrialsPractice != None:
-            for paramName in thisTrialsPractice:
-                exec('{} = thisTrialsPractice[paramName]'.format(paramName))
+    # -------Start Routine "feedback"-------
+    while continueRoutine and routineTimer.getTime() > 0:
+        # get current time
+        t = feedbackClock.getTime()
+        frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
+        # update/draw components on each frame
         
-        # ------Prepare to start Routine "PracticeRoutine"-------
-        t = 0
-        PracticeRoutineClock.reset()  # clock
-        frameN = -1
-        continueRoutine = True
-        # update component parameters for each repeat
-        x = randint(low = 1, high = 5)
-        imageprobando.setImage(stimFile)
-        # keep track of which components have finished
-        PracticeRoutineComponents = [imageprobando, noisePractice]
-        for thisComponent in PracticeRoutineComponents:
-            if hasattr(thisComponent, 'status'):
-                thisComponent.status = NOT_STARTED
         
-        # -------Start Routine "PracticeRoutine"-------
-        while continueRoutine:
-            # get current time
-            t = PracticeRoutineClock.getTime()
-            frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
-            # update/draw components on each frame
-            
-            
-            # *imageprobando* updates
-            if t >= 0.0 and imageprobando.status == NOT_STARTED:
-                # keep track of start time/frame for later
-                imageprobando.tStart = t
-                imageprobando.frameNStart = frameN  # exact frame index
-                imageprobando.setAutoDraw(True)
-            frameRemains = 0.0 + 0.7- win.monitorFramePeriod * 0.75  # most of one frame period left
-            if imageprobando.status == STARTED and t >= frameRemains:
-                imageprobando.setAutoDraw(False)
-            
-            # *noisePractice* updates
-            if t >= 0.7 and noisePractice.status == NOT_STARTED:
-                # keep track of start time/frame for later
-                noisePractice.tStart = t
-                noisePractice.frameNStart = frameN  # exact frame index
-                noisePractice.setAutoDraw(True)
-            frameRemains = 0.7 + x- win.monitorFramePeriod * 0.75  # most of one frame period left
-            if noisePractice.status == STARTED and t >= frameRemains:
-                noisePractice.setAutoDraw(False)
-            if noisePractice.status == STARTED:
-                if noisePractice._needBuild:
-                    noisePractice.buildNoise()
-            
-            # check if all components have finished
-            if not continueRoutine:  # a component has requested a forced-end of Routine
-                break
-            continueRoutine = False  # will revert to True if at least one component still running
-            for thisComponent in PracticeRoutineComponents:
-                if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
-                    continueRoutine = True
-                    break  # at least one component has not yet finished
-            
-            # check for quit (the Esc key)
-            if endExpNow or event.getKeys(keyList=["escape"]):
-                core.quit()
-            
-            # refresh the screen
-            if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
-                win.flip()
+        # *text* updates
+        if t >= 0.0 and text.status == NOT_STARTED:
+            # keep track of start time/frame for later
+            text.tStart = t
+            text.frameNStart = frameN  # exact frame index
+            text.setAutoDraw(True)
+        frameRemains = 0.0 + 1.0- win.monitorFramePeriod * 0.75  # most of one frame period left
+        if text.status == STARTED and t >= frameRemains:
+            text.setAutoDraw(False)
         
-        # -------Ending Routine "PracticeRoutine"-------
-        for thisComponent in PracticeRoutineComponents:
-            if hasattr(thisComponent, "setAutoDraw"):
-                thisComponent.setAutoDraw(False)
+        # check if all components have finished
+        if not continueRoutine:  # a component has requested a forced-end of Routine
+            break
+        continueRoutine = False  # will revert to True if at least one component still running
+        for thisComponent in feedbackComponents:
+            if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
+                continueRoutine = True
+                break  # at least one component has not yet finished
         
-        # the Routine "PracticeRoutine" was not non-slip safe, so reset the non-slip timer
-        routineTimer.reset()
-        thisExp.nextEntry()
+        # check for quit (the Esc key)
+        if endExpNow or event.getKeys(keyList=["escape"]):
+            core.quit()
         
-    # completed 1 repeats of 'trialsPractice'
+        # refresh the screen
+        if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+            win.flip()
     
+    # -------Ending Routine "feedback"-------
+    for thisComponent in feedbackComponents:
+        if hasattr(thisComponent, "setAutoDraw"):
+            thisComponent.setAutoDraw(False)
+    # End Routine
+    if stim == one_back and respPrac.keys == 'space':
+         msg= "Correct! RT=%.3f" %(respPrac.rt)
+    elif stim != one_back and not respPrac.keys:
+          msg= "Correct!" 
+    elif stim != one_back and respPrac.keys == 'space':
+         msg="Incorrect" 
+    elif stim == one_back and not respPrac.keys:
+         msg="You miss that one" 
+    one_back = stim
     thisExp.nextEntry()
     
-# completed 1 repeats of 'trials'
+# completed 1 repeats of 'trialsPractice'
 
 
 # ------Prepare to start Routine "InstructionsExperiment"-------
@@ -631,8 +728,8 @@ for thisConditionsLoop in conditionsLoop:
         valencedTrialClock.reset()  # clock
         frameN = -1
         continueRoutine = True
-        routineTimer.add(1.700000)
         # update component parameters for each repeat
+        x = randint(low = 1, high = 5)
         image_2.setImage(stimFile)
         # keep track of which components have finished
         valencedTrialComponents = [image_2, noise]
@@ -641,11 +738,12 @@ for thisConditionsLoop in conditionsLoop:
                 thisComponent.status = NOT_STARTED
         
         # -------Start Routine "valencedTrial"-------
-        while continueRoutine and routineTimer.getTime() > 0:
+        while continueRoutine:
             # get current time
             t = valencedTrialClock.getTime()
             frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
             # update/draw components on each frame
+            
             
             # *image_2* updates
             if t >= 0.0 and image_2.status == NOT_STARTED:
@@ -663,7 +761,7 @@ for thisConditionsLoop in conditionsLoop:
                 noise.tStart = t
                 noise.frameNStart = frameN  # exact frame index
                 noise.setAutoDraw(True)
-            frameRemains = 0.7 + 1.0- win.monitorFramePeriod * 0.75  # most of one frame period left
+            frameRemains = 0.7 + x- win.monitorFramePeriod * 0.75  # most of one frame period left
             if noise.status == STARTED and t >= frameRemains:
                 noise.setAutoDraw(False)
             if noise.status == STARTED:
@@ -691,6 +789,9 @@ for thisConditionsLoop in conditionsLoop:
         for thisComponent in valencedTrialComponents:
             if hasattr(thisComponent, "setAutoDraw"):
                 thisComponent.setAutoDraw(False)
+        
+        # the Routine "valencedTrial" was not non-slip safe, so reset the non-slip timer
+        routineTimer.reset()
         thisExp.nextEntry()
         
     # completed 1 repeats of 'experimentalLoop'
@@ -751,6 +852,8 @@ while continueRoutine and routineTimer.getTime() > 0:
 for thisComponent in ThanksComponents:
     if hasattr(thisComponent, "setAutoDraw"):
         thisComponent.setAutoDraw(False)
+
+
 
 # these shouldn't be strictly necessary (should auto-save)
 thisExp.saveAsWideText(filename+'.csv')
